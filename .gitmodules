@@ -1,0 +1,3 @@
+[submodule "loan-api"]
+	path = loan-api
+	url = https://github.com/DeepakkhimavathBB/loan-api.git
