@@ -1,0 +1,138 @@
+<div class="loan-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-chip">
+        <div class="avatar">M</div>
+        <div class="user-info">
+          <div class="hello">Manager</div>
+          <div class="name">Dashboard</div>
+        </div>
+      </div>
+  
+      <nav class="menu">
+        <span class="menu-label">Actions</span>
+        <button (click)="exportCSV()">⬇ Export CSV</button>
+        <button (click)="exportPDF()">⬇ Export PDF</button>
+        <button (click)="loadLoans()">↻ Refresh</button>
+      </nav>
+    </aside>
+  
+    <!-- Main content -->
+    <section class="content">
+      <!-- Toast -->
+      <div *ngIf="toast.text" class="toast"
+           [class.success]="toast.type==='success'"
+           [class.error]="toast.type==='error'"
+           [class.info]="toast.type==='info'">
+        {{ toast.text }}
+      </div>
+  
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat-card approved">Approved: {{ stats.approved }}</div>
+        <div class="stat-card pending">Pending: {{ stats.pending }}</div>
+        <div class="stat-card rejected">Rejected: {{ stats.rejected }}</div>
+        <div class="stat-card withdrawn">Withdrawn: {{ stats.withdrawn }}</div>
+      </div>
+  
+      <!-- Filters -->
+      <div class="card">
+        <h2>Search & Filters</h2>
+        <div class="filters">
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            placeholder="Search by Loan #, User ID, Name, Type, Purpose" />
+  
+          <select [(ngModel)]="statusFilter">
+            <option value="">All Status</option>
+            <option>Pending</option>
+            <option>Approved</option>
+            <option>Rejected</option>
+            <option>Withdrawn</option>
+          </select>
+  
+          <input type="number" [(ngModel)]="minAmount" placeholder="Min Amount" />
+          <input type="number" [(ngModel)]="maxAmount" placeholder="Max Amount" />
+  
+          <button class="btn" (click)="clearFilters()">Clear</button>
+        </div>
+      </div>
+  
+      <!-- Table -->
+      <div class="card">
+        <h2>All Loan Applications</h2>
+  
+        <div class="table-wrap" *ngIf="getFilteredLoans().length; else empty">
+          <table id="loansTable">
+            <thead>
+              <tr>
+                <th>Loan #</th>
+                <th>User ID</th>
+                <th>Applicant</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Tenure</th>
+                <th>Purpose</th>
+                <th>Documents</th>
+                <th>Status</th>
+                <th>Applied On</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr *ngFor="let loan of getFilteredLoans()">
+                <td>{{ loan.loanId }}</td>
+                <td>{{ loan.userId }}</td>
+                <td>{{ loan.applicantName }}</td>
+                <td>{{ loan.type }}</td>
+                <td>₹ {{ loan.amount | number }}</td>
+                <td>{{ loan.tenure }}</td>
+                <td>{{ loan.purpose }}</td>
+                <td>
+                  <ng-container *ngIf="loan.documents?.length; else noDocs">
+                    <ul class="muted" style="padding-left: 16px; margin: 0;">
+                      <li *ngFor="let doc of loan.documents; let i = index">
+                        <a [href]="doc" target="_blank" class="link">Document {{ i + 1 }}</a>
+                      </li>
+                    </ul>
+                  </ng-container>
+                  <ng-template #noDocs><span class="muted">No Files</span></ng-template>
+                </td>
+  
+                <td>
+                  <span class="badge"
+                    [class.badge-pending]="loan.status === 'Pending'"
+                    [class.badge-approved]="loan.status === 'Approved'"
+                    [class.badge-rejected]="loan.status === 'Rejected'"
+                    [class.badge-withdrawn]="loan.status === 'Withdrawn'">
+                    {{ loan.status }}
+                  </span>
+                </td>
+  
+                <td>{{ loan.createdAt | date:'medium' }}</td>
+  
+                <td class="row-actions">
+                  <button *ngIf="loan.status==='Pending'"
+                          (click)="updateStatus(loan,'Approved')"
+                          class="btn btn-success">✔ Approve</button>
+  
+                  <button *ngIf="loan.status==='Pending'"
+                          (click)="updateStatus(loan,'Rejected')"
+                          class="btn btn-danger">✖ Reject</button>
+  
+                  <span *ngIf="loan.status!=='Pending'" class="muted">—</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <ng-template #empty>
+          <p class="muted">No loans match the filters.</p>
+        </ng-template>
+      </div>
+    </section>
+  </div>
+  

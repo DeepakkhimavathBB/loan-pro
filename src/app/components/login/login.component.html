@@ -1,0 +1,34 @@
+<section class="form-section">
+  <div class="login-card">
+    <h2 class="title">Welcome Back 👋</h2>
+
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group">
+        <input
+          type="email"
+          [(ngModel)]="loginData.email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="password"
+          [(ngModel)]="loginData.password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+  <!-- ✅ Modern toast popup -->
+  <div class="toast success" *ngIf="showPopup">
+    <span>✅ Login Successful! Redirecting...</span>
+  </div>
+</section>

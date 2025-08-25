@@ -1,0 +1,7 @@
+{
+    "managers": [
+      { "id": 1, "username": "admin", "password": "admin123" },
+      { "id": 2, "username": "deepak", "password": "deep123" }
+    ]
+  }
+  

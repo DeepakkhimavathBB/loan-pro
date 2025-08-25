@@ -1,0 +1,409 @@
+{
+  "loans": [
+    {
+      "id": "c490",
+      "loanId": 1755711692235,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Home Loan",
+      "amount": 5000000,
+      "tenure": "15 Years",
+      "purpose": "Construction of house ",
+      "status": "Rejected",
+      "createdAt": "2025-08-20T17:41:32.235Z"
+    },
+    {
+      "id": "fffd",
+      "loanId": 1755711746531,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Personal Loan",
+      "amount": 200000,
+      "tenure": "10 Years",
+      "purpose": "Buisness",
+      "status": "Withdrawn",
+      "createdAt": "2025-08-20T17:42:26.531Z"
+    },
+    {
+      "id": "7b30",
+      "loanId": 1755711903058,
+      "userId": "b077",
+      "applicantName": "Chirag",
+      "type": "Business Loan",
+      "amount": 30000,
+      "tenure": "5 Years",
+      "purpose": "for buisness purpose ",
+      "status": "Rejected",
+      "createdAt": "2025-08-20T17:45:03.059Z"
+    },
+    {
+      "id": "66ac",
+      "loanId": 1755712839816,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Car Loan",
+      "amount": 9000000000,
+      "tenure": "15 Years",
+      "purpose": "Construction of house ",
+      "documents": [
+        "assets/uploads/hero-bg.jpg"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-20T18:00:39.816Z"
+    },
+    {
+      "id": "1e92",
+      "loanId": 1755712914193,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Personal Loan",
+      "amount": 3245766,
+      "tenure": "10 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "assets/uploads/login.png"
+      ],
+      "status": "Rejected",
+      "createdAt": "2025-08-20T18:01:54.193Z"
+    },
+    {
+      "id": "4ef9",
+      "loanId": 1755715945718,
+      "userId": "4a94",
+      "applicantName": "Anusha",
+      "type": "Personal Loan",
+      "amount": 12345,
+      "tenure": "3 Years",
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1755715945709-254907344-login.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-20T18:52:25.718Z"
+    },
+    {
+      "id": "54ec",
+      "loanId": 1755715983561,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Car Loan",
+      "amount": 23456789,
+      "tenure": "15 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755715983555-36314268-login.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-20T18:53:03.561Z"
+    },
+    {
+      "id": "a6bb",
+      "loanId": 1755718847381,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Car Loan",
+      "amount": 765434,
+      "tenure": "5 Years",
+      "purpose": "Buisness",
+      "documents": [
+        "http://localhost:5000/uploads/1755718847375-375590343-login.png",
+        "http://localhost:5000/uploads/1755718847377-275028608-hero-bg.jpg"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-20T19:40:47.381Z"
+    },
+    {
+      "id": "da22",
+      "loanId": 1755721160564,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Car Loan",
+      "amount": 23456765,
+      "tenure": "10 Years",
+      "purpose": "personal ",
+      "documents": [
+        "http://localhost:5000/uploads/1755721160537-474398538-login.png",
+        "http://localhost:5000/uploads/1755721160539-706386750-img2.png",
+        "http://localhost:5000/uploads/1755721160542-268392150-shared image.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-20T20:19:20.564Z"
+    },
+    {
+      "id": "6036",
+      "loanId": 1755726434921,
+      "userId": "6f1d",
+      "applicantName": "uttam",
+      "type": "Car Loan",
+      "amount": 345678,
+      "tenure": "3 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755726434917-997022994-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-20T21:47:14.921Z"
+    },
+    {
+      "id": "65cc",
+      "loanId": 1755754878521,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Personal Loan",
+      "amount": 3456789876,
+      "tenure": "10 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755754878504-494905802-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
+      ],
+      "status": "Rejected",
+      "createdAt": "2025-08-21T05:41:18.521Z"
+    },
+    {
+      "id": "61a0",
+      "loanId": 1755755036725,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Home Loan",
+      "amount": 45678,
+      "tenure": "10 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755755036720-807260971-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
+      ],
+      "status": "Withdrawn",
+      "createdAt": "2025-08-21T05:43:56.725Z"
+    },
+    {
+      "id": "85b1",
+      "loanId": 1755755360770,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Personal Loan",
+      "amount": 6667775,
+      "tenure": "5 Years",
+      "purpose": "hehe",
+      "documents": [
+        "http://localhost:5000/uploads/1755755360689-358533015-loans (1).pdf"
+      ],
+      "status": "Rejected",
+      "createdAt": "2025-08-21T05:49:20.770Z"
+    },
+    {
+      "id": "e726",
+      "loanId": 1755771204657,
+      "userId": "6047",
+      "applicantName": "Kushal",
+      "type": "Home Loan",
+      "amount": 500000,
+      "tenure": "15 Years",
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1755771204646-501278673-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-21T10:13:24.657Z"
+    },
+    {
+      "id": "dc6e",
+      "loanId": 1755864204760,
+      "userId": "f5e7",
+      "applicantName": "DeepakKhimavath",
+      "type": "Home Loan",
+      "amount": 21345,
+      "tenure": "5 Years",
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1755864204715-92059625-ngrok-v3-stable-windows-amd64.zip"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-22T12:03:24.760Z"
+    },
+    {
+      "id": "3b61",
+      "loanId": 1755961657484,
+      "userId": 2,
+      "applicantName": "deepak",
+      "type": "Home Loan",
+      "amount": 23456789,
+      "tenure": "3 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755961657365-919500063-Screenshot 2025-08-21 183111.png",
+        "http://localhost:5000/uploads/1755961657373-523207262-loans (1).pdf"
+      ],
+      "status": "Rejected",
+      "createdAt": "2025-08-23T15:07:37.484Z"
+    },
+    {
+      "id": "ba01",
+      "loanId": 1755961774860,
+      "userId": 2,
+      "applicantName": "deepak",
+      "type": "Car Loan",
+      "amount": 250000,
+      "tenure": "5 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755961774852-316995650-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-23T15:09:34.860Z"
+    },
+    {
+      "id": "701f",
+      "loanId": 1755962629024,
+      "userId": 3,
+      "applicantName": "Deepak",
+      "type": "Home Loan",
+      "amount": 50000000000,
+      "tenure": "1 Year",
+      "purpose": "for construction of villa ",
+      "documents": [
+        "http://localhost:5000/uploads/1755962629019-298463416-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-23T15:23:49.024Z"
+    },
+    {
+      "id": "c189",
+      "loanId": 1755963389541,
+      "userId": 3,
+      "applicantName": "Deepak",
+      "type": "Car Loan",
+      "amount": 243556,
+      "tenure": "5 Years",
+      "purpose": "Buisness",
+      "documents": [
+        "http://localhost:5000/uploads/1755963389538-748467760-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-23T15:36:29.542Z"
+    },
+    {
+      "id": "21f9",
+      "loanId": 1755963761392,
+      "userId": 4,
+      "applicantName": "Deepak",
+      "type": "Car Loan",
+      "amount": 23456765445765644,
+      "tenure": "3 Years",
+      "purpose": "Buisnes",
+      "documents": [
+        "http://localhost:5000/uploads/1755963761388-283641306-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-23T15:42:41.392Z"
+    },
+    {
+      "id": "d38d",
+      "loanId": 1755963978535,
+      "userId": 1,
+      "applicantName": "asdfg",
+      "type": "Personal Loan",
+      "amount": 234567654,
+      "tenure": "3 Years",
+      "purpose": "Buisness",
+      "documents": [
+        "http://localhost:5000/uploads/1755963978529-230484461-Screenshot 2025-08-21 183111.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-23T15:46:18.535Z"
+    },
+    {
+      "id": "c392",
+      "loanId": 1755964133941,
+      "userId": 3,
+      "applicantName": "Deepak",
+      "type": "Home Loan",
+      "amount": 345678987654323460,
+      "tenure": "3 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755964133935-190803440-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-08-23T15:48:53.941Z"
+    },
+    {
+      "id": "a74afabd-bf28-4fe8-8332-ead7cdfc8945",
+      "createdAt": "2025-08-23T16:16:06.740Z",
+      "loanId": 1755965766740,
+      "userId": 2,
+      "applicantName": "Deepak",
+      "applicantEmail": "khimavathdeepak@gmail.com",
+      "type": "Home Loan",
+      "amount": 2345678,
+      "tenure": "5 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1755965766733-578237846-Screenshot 2025-08-21 183111.png"
+      ],
+      "status": "Approved"
+    },
+    {
+      "id": "08b5ab78-ff2a-4072-9f4d-6825a4c43e79",
+      "createdAt": "2025-08-23T16:20:34.670Z",
+      "loanId": 1755966034670,
+      "userId": 2,
+      "applicantName": "Deepak",
+      "applicantEmail": "khimavathdeepak@gmail.com",
+      "type": "Car Loan",
+      "amount": 345678,
+      "tenure": "5 Years",
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1755966034663-282310000-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved"
+    },
+    {
+      "id": "a7ddf963-0402-4589-bb93-017f63a10904",
+      "createdAt": "2025-08-23T16:31:13.688Z",
+      "loanId": 1755966673688,
+      "userId": 2,
+      "applicantName": "Deepak Khimavath ",
+      "applicantEmail": "khimavathdeepak@gmail.com",
+      "type": "Business Loan",
+      "amount": 100000001000001000,
+      "tenure": "5 Years",
+      "purpose": "ull be reciving this inshort time ",
+      "documents": [
+        "http://localhost:5000/uploads/1755966673683-540638010-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Approved"
+    },
+    {
+      "id": "3a58d39f-9aaf-4d7f-a083-3a0b9932a48a",
+      "createdAt": "2025-08-23T16:33:50.109Z",
+      "loanId": 1755966830109,
+      "userId": 2,
+      "applicantName": "Deepak Khimavath ",
+      "applicantEmail": "khimavathdeepak@gmail.com",
+      "type": "Car Loan",
+      "amount": 234,
+      "tenure": "5 Years",
+      "purpose": "sdfgh",
+      "documents": [
+        "http://localhost:5000/uploads/1755966830103-108332497-Screenshot 2025-08-22 135736.png"
+      ],
+      "status": "Rejected"
+    },
+    {
+      "id": "f4f7fd2a-c877-47b1-aed6-c38e0d126747",
+      "createdAt": "2025-08-25T13:20:35.781Z",
+      "loanId": 1756128035781,
+      "userId": 3,
+      "applicantName": "Khushal",
+      "applicantEmail": "kushalkn11@gmail.com",
+      "type": "Business Loan",
+      "amount": 45666256,
+      "tenure": "10 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1756128035762-536029242-Screenshot 2025-08-21 183111.png"
+      ],
+      "status": "Approved"
+    }
+  ]
+}

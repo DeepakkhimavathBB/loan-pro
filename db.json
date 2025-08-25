@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "asdfg",
+      "email": "asdfg@gmail.com",
+      "password": "$2b$10$Kfqqinx7X3LttSxLBDmo/e5z01AjNJw/hBbK03hI1b6gWLLaWf/Wi",
+      "phone": "2348765445",
+      "createdAt": "2025-08-23T15:45:37.832Z"
+    },
+    {
+      "id": 2,
+      "name": "Deepak Khimavath ",
+      "email": "khimavathdeepak@gmail.com",
+      "password": "$2b$10$fWkuI3zWhw4sv8mHkysdr.LBFZWfBS.MZRKx22Pl5uon.eiDLQDx2",
+      "phone": "2345678976",
+      "createdAt": "2025-08-23T16:30:10.774Z"
+    },
+    {
+      "id": 3,
+      "name": "Khushal",
+      "email": "kushalkn11@gmail.com",
+      "password": "$2b$10$kogjqHnnQDbQgYz/0NTbz.xH/Mf6DS6zfCw9gjOfOFGnbObTUIwkC",
+      "phone": "1324253556",
+      "createdAt": "2025-08-25T13:19:53.504Z"
+    }
+  ]
+}
