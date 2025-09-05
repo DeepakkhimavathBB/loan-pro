@@ -23,6 +23,54 @@
       "password": "$2b$10$kogjqHnnQDbQgYz/0NTbz.xH/Mf6DS6zfCw9gjOfOFGnbObTUIwkC",
       "phone": "1324253556",
       "createdAt": "2025-08-25T13:19:53.504Z"
+    },
+    {
+      "id": 4,
+      "name": "deepak",
+      "email": "d@gmail.com",
+      "password": "$2b$10$Ef4zU0K6FNV04pBXoxDO0uELB1pTZWYynyaxYCuy1Ei0/J/i0wIge",
+      "phone": "2345678987",
+      "createdAt": "2025-09-04T04:03:31.019Z"
+    },
+    {
+      "id": 5,
+      "name": "a",
+      "email": "a@gmail.com",
+      "password": "$2b$10$fJh/tAjmaJ2S0rc0o1F41OQyk1pFtZ5XiV0ane4FA/JrovRLhj7rG",
+      "phone": "7204209095",
+      "createdAt": "2025-09-04T04:06:32.577Z"
+    },
+    {
+      "id": 6,
+      "name": "a",
+      "email": "b@gmail.com",
+      "password": "$2b$10$4KFRDdEbaJXYBiit3O0pC.yosyNu8I0Ac8IVkLMJIKxkpIax46Hda",
+      "phone": "7204209095",
+      "createdAt": "2025-09-04T04:09:24.497Z"
+    },
+    {
+      "id": 7,
+      "name": "",
+      "email": "khimavathd@gmail.com",
+      "password": "$2b$10$a/OjGRrp7Nxm3sEghvuuT.TbN.Nm38UPcHg55UvoMYef8kAjdoV4a",
+      "phone": "7204209095",
+      "createdAt": "2025-09-04T04:13:58.277Z"
+    },
+    {
+      "id": 8,
+      "name": "e",
+      "email": "e@gmail.com",
+      "password": "$2b$10$MXl4GJ7Uq7Yqv7iQ/15q3OUwRZisvNdvmC.LZfNx5YFAuI.EbxX6K",
+      "phone": "123456789",
+      "createdAt": "2025-09-04T04:16:52.068Z"
+    },
+    {
+      "id": 9,
+      "name": "q",
+      "email": "q@gmail.com",
+      "password": "$2b$10$qJ2AzI7Ywz5PUnRW31YCYOf1n.jUe2XWSqCmrxyCBMyqcKiBMS20C",
+      "phone": "1234567898",
+      "createdAt": "2025-09-04T04:33:06.332Z"
     }
   ]
 }

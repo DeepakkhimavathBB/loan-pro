@@ -11,26 +11,26 @@ export class LoanService {
 
   // create loan (attach userId + loanId in component before calling)
   addLoan(loan: any): Observable<any> {
-    return this.http.post(this.loansUrl, loan); // json-server will also assign id
+    return this.http.post(this.loansUrl, loan);
   }
 
-  // list loans for a user
+  // ✅ list loans for a user (use backend route)
   getLoansByUser(userId: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.loansUrl}?userId=${userId}`);
+    return this.http.get<any[]>(`${this.loansUrl}/user/${userId}`);
   }
 
   // withdraw = update status to "Withdrawn"
-  withdrawLoan(id: number, patch: Partial<any>): Observable<any> {
+  withdrawLoan(id: string, patch: Partial<any>): Observable<any> {
     return this.http.patch(`${this.loansUrl}/${id}`, patch);
   }
 
-    // ✅ Get all loans
-    getAllLoans(): Observable<any[]> {
-      return this.http.get<any[]>(this.loansUrl);
-    }
-  
-    // ✅ Update loan status
-    updateLoanStatus(loanId: number, status: string): Observable<any> {
-      return this.http.patch(`${this.loansUrl}/${loanId}`, { status });
-    }
+  // ✅ Get all loans (admin / testing)
+  getAllLoans(): Observable<any[]> {
+    return this.http.get<any[]>(this.loansUrl);
+  }
+
+  // ✅ Update loan status
+  updateLoanStatus(loanId: string, status: string): Observable<any> {
+    return this.http.patch(`${this.loansUrl}/${loanId}`, { status });
+  }
 }

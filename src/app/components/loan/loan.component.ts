@@ -92,9 +92,9 @@ export class LoanComponent implements OnInit {
 
         const payload = {
           loanId: Date.now(),
-          userId: this.user.id,
+          userId: Number(this.user.id),   // ✅ force number type
           applicantName: this.user.name,
-          applicantEmail: this.user.email,   // ✅ Added email for notifications
+          applicantEmail: this.user.email,
           type: this.loanForm.type,
           amount: +this.loanForm.amount,
           tenure: this.loanForm.tenure,
@@ -103,6 +103,7 @@ export class LoanComponent implements OnInit {
           status: 'Pending' as LoanStatus,
           createdAt: new Date().toISOString()
         };
+        
 
         this.loanService.addLoan(payload).subscribe({
           next: () => {

@@ -1,5 +1,3 @@
-// loan-server.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -24,20 +22,22 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'deepakkhimavath@gmail.com',   // your gmail
-    pass: 'kpfo lqhr cral jnkr'          // Gmail app password
+    pass: 'grnz atiu ujqk gsti'          // Gmail app password
   }
 });
 
-// ✅ Get all loans
+// ✅ Get all loans (admin only or testing)
 app.get('/loans', (req, res) => {
   res.json(db.get('loans').value());
 });
 
-// ✅ Get loans by userId
+// ✅ FIXED: Get loans by userId
 app.get('/loans/user/:userId', (req, res) => {
-  const loans = db.get('loans').filter({ userId: req.params.userId }).value();
+  const userId = parseInt(req.params.userId);  // ensure number
+  const loans = db.get('loans').filter({ userId }).value();
   res.json(loans);
 });
+
 
 // ✅ Add new loan
 app.post('/loans', (req, res) => {

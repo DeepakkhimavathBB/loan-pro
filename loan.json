@@ -404,6 +404,38 @@
         "http://localhost:5000/uploads/1756128035762-536029242-Screenshot 2025-08-21 183111.png"
       ],
       "status": "Approved"
+    },
+    {
+      "id": "28608136-cb61-4964-891c-8bd8a10913c2",
+      "createdAt": "2025-09-04T04:15:45.845Z",
+      "loanId": 1756959345845,
+      "userId": 7,
+      "applicantName": "",
+      "applicantEmail": "khimavathd@gmail.com",
+      "type": "Personal Loan",
+      "amount": 234567890,
+      "tenure": "1 Year",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1756959345832-206519677-Sales.csv"
+      ],
+      "status": "Approved"
+    },
+    {
+      "id": "4dfe60d7-23bb-4062-b142-b8bacc91cd1a",
+      "createdAt": "2025-09-04T04:49:40.330Z",
+      "loanId": 1756961380330,
+      "userId": 9,
+      "applicantName": "q",
+      "applicantEmail": "q@gmail.com",
+      "type": "Personal Loan",
+      "amount": 2345678,
+      "tenure": "5 Years",
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1756961380321-818555980-Screenshot 2025-09-03 122846.png"
+      ],
+      "status": "Approved"
     }
   ]
 }
