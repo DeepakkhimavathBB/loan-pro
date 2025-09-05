@@ -436,6 +436,54 @@
         "http://localhost:5000/uploads/1756961380321-818555980-Screenshot 2025-09-03 122846.png"
       ],
       "status": "Approved"
+    },
+    {
+      "id": "d8ebe645-d33f-4e43-967c-50cb58fb5d34",
+      "createdAt": "2025-09-05T12:53:23.656Z",
+      "loanId": 1757076803656,
+      "userId": 10,
+      "applicantName": "h",
+      "applicantEmail": "h@gmail.com",
+      "type": "Personal Loan",
+      "amount": 1002,
+      "tenure": "5 Years",
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1757076803624-353961669-ETS tools.png"
+      ],
+      "status": "Withdrawn"
+    },
+    {
+      "id": "106ee478-fca1-4aa8-bd58-5207602faed5",
+      "createdAt": "2025-09-05T13:08:28.009Z",
+      "loanId": 1757077708009,
+      "userId": 11,
+      "applicantName": "Kushal",
+      "applicantEmail": "kushalkn11@gmail.com",
+      "type": "Personal Loan",
+      "amount": 500000,
+      "tenure": "3 Years",
+      "purpose": "bikeb loan",
+      "documents": [
+        "http://localhost:5000/uploads/1757077707984-92977156-ETS tools.png"
+      ],
+      "status": "Approved"
+    },
+    {
+      "id": "361a0d3c-e5a9-4a56-a362-f086ee42f529",
+      "createdAt": "2025-09-05T13:20:06.026Z",
+      "loanId": 1757078406026,
+      "userId": 12,
+      "applicantName": "bhavana",
+      "applicantEmail": "bhavanaminchu@gmail.com",
+      "type": "Business Loan",
+      "amount": 9876543245675434000,
+      "tenure": "15 Years",
+      "purpose": "Buisness",
+      "documents": [
+        "http://localhost:5000/uploads/1757078405937-69254918-loans (3).pdf"
+      ],
+      "status": "Approved"
     }
   ]
 }
