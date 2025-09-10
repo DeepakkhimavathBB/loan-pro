@@ -103,6 +103,14 @@
       "password": "$2b$10$mjgVNiDmAzSMsohxv7vR3u.sD7V0xeY0v3VKn4NB8WacUXvB4UJbG",
       "phone": "6342523332",
       "createdAt": "2025-09-10T06:11:32.693Z"
+    },
+    {
+      "id": 16,
+      "name": "Deepak",
+      "email": "deepakkhimavath@gmail.com",
+      "password": "$2b$10$d/.nD0pHhHqlT6tRPPYqRu1HVB09Pp8H0xxySJEQXtjdPjQbdqTE2",
+      "phone": "123456789",
+      "createdAt": "2025-09-10T10:11:30.363Z"
     }
   ]
 }

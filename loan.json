@@ -976,6 +976,27 @@
       ],
       "status": "Approved",
       "createdAt": "2025-09-10T06:12:23.310Z"
+    },
+    {
+      "id": "ae0e33fc-71d2-44e4-866f-13ba552271b8",
+      "loanId": 1757499214712,
+      "userId": 16,
+      "applicantName": "Deepak",
+      "applicantEmail": "deepakkhimavath@gmail.com",
+      "type": "Home Loan",
+      "amount": 23455,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 1955,
+      "totalPaid": 0,
+      "repayments": [],
+      "purpose": "personal ",
+      "documents": [
+        "http://localhost:5000/uploads/1757499214700-18395254-err3.png"
+      ],
+      "status": "Pending",
+      "createdAt": "2025-09-10T10:13:34.715Z"
     }
   ]
 }
