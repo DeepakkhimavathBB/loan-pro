@@ -1,12 +1,14 @@
 {
   "name": "loan-pro",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --host 0.0.0.0 --port 4200",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr": "node server.js",
+    "postinstall": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +28,8 @@
     "express": "^5.1.0",
     "file-saver": "^2.0.5",
     "fs": "^0.0.1-security",
-    "jspdf": "^3.0.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.2",
     "jspdf-autotable": "^5.0.2",
     "lowdb": "^1.0.0",
     "multer": "^2.0.2",
@@ -41,6 +44,7 @@
     "@angular/compiler-cli": "^14.2.0",
     "@types/file-saver": "^2.0.7",
     "@types/jasmine": "~4.0.0",
+    "@types/jspdf": "^2.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -49,9 +53,19 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
   },
-  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.",
-  "main": "karma.conf.js",
-  "keywords": [],
-  "author": "",
+  "engines": {
+    "node": ">=16.x <=20.x",
+    "npm": ">=7.x <=10.x"
+  },
+  "description": "Loan Pro Application - Angular 14 + Node/Express backend",
+  "main": "server.js",
+  "keywords": [
+    "angular",
+    "loan",
+    "node",
+    "express",
+    "deployment"
+  ],
+  "author": "Deepak",
   "license": "ISC"
 }

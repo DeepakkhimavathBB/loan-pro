@@ -5,7 +5,9 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { Chart, type ChartType } from 'chart.js/auto';
+import { Chart, ChartType, registerables } from 'chart.js';
+
+Chart.register(...registerables);
 
 type LoanStatus = 'Pending' | 'Approved' | 'Rejected' | 'Withdrawn' | 'Closed' | '';
 
