@@ -1,7 +1,7 @@
 export const environment = {
-  production: true,
-  usersApi: 'http://localhost:3002',
-  loansApi: 'http://localhost:3001',
-  managerApi: 'http://localhost:3003'  // managers
+  production: false,
+  usersApi: 'https://user-server-api-1.onrender.com',
+  loansApi: 'https://loan-server-api-lint.onrender.com',
+  managerApi: 'https://manager-server-api.onrender.com'  // managers
 
 };
