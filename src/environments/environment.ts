@@ -4,11 +4,12 @@
 
 export const environment = {
   production: false,
-  usersApi: 'http://localhost:3002',
-  loansApi: 'http://localhost:3001',
-  managerApi: 'http://localhost:3003'  // managers
+  usersApi: 'https://user-server-api-1.onrender.com',
+  loansApi: 'https://loan-server-api-lint.onrender.com',
+  managerApi: 'https://manager-server-api.onrender.com'  // managers
 
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
