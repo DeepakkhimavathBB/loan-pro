@@ -9,6 +9,12 @@
     "scripts": {
       "build": "ng build --configuration production"
     },
-    "outputDirectory": "dist/loan-pro"
+    "outputDirectory": "dist/loan-pro",
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
   }
   
