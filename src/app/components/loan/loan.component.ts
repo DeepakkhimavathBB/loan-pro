@@ -88,7 +88,7 @@ export class LoanComponent implements OnInit {
     const formData = new FormData();
     this.selectedFiles.forEach(file => formData.append('files', file));
 
-    this.http.post<any>('http://localhost:5000/upload', formData).subscribe({
+    this.http.post<any>('https://loan-api-1.onrender.com/upload', formData).subscribe({
       next: (res) => {
         const docUrls = (res?.files || []).map((f: any) => f.url);
         this.finishApply(docUrls);
