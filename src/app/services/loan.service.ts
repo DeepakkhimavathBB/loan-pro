@@ -1,7 +1,10 @@
+// src/app/services/loan.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+
+export type RepaymentType = 'monthly' | 'full' | 'custom';
 
 @Injectable({ providedIn: 'root' })
 export class LoanService {
@@ -9,28 +12,35 @@ export class LoanService {
 
   constructor(private http: HttpClient) {}
 
-  // create loan (attach userId + loanId in component before calling)
   addLoan(loan: any): Observable<any> {
     return this.http.post(this.loansUrl, loan);
   }
 
-  // ✅ list loans for a user (use backend route)
-  getLoansByUser(userId: number): Observable<any[]> {
+  getLoansByUser(userId: number | string): Observable<any[]> {
     return this.http.get<any[]>(`${this.loansUrl}/user/${userId}`);
   }
 
-  // withdraw = update status to "Withdrawn"
   withdrawLoan(id: string, patch: Partial<any>): Observable<any> {
     return this.http.patch(`${this.loansUrl}/${id}`, patch);
   }
 
-  // ✅ Get all loans (admin / testing)
   getAllLoans(): Observable<any[]> {
     return this.http.get<any[]>(this.loansUrl);
   }
 
-  // ✅ Update loan status
   updateLoanStatus(loanId: string, status: string): Observable<any> {
     return this.http.patch(`${this.loansUrl}/${loanId}`, { status });
+  }
+
+  getLoanById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.loansUrl}/${id}`);
+  }
+
+  // ✅ Repayment (monthly, full, custom)
+  payLoan(
+    id: string,
+    payload: { type: RepaymentType; amount?: number }
+  ): Observable<any> {
+    return this.http.post<any>(`${this.loansUrl}/${id}/pay`, payload);
   }
 }

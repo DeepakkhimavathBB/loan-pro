@@ -1,138 +1,163 @@
-<div class="loan-layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="user-chip">
-        <div class="avatar">M</div>
-        <div class="user-info">
-          <div class="hello">Manager</div>
-          <div class="name">Dashboard</div>
+<div class="manager-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="user-chip">
+      <div class="avatar">M</div>
+      <div class="user-info">
+        <div class="hello">Welcome,</div>
+        <div class="name">Manager</div>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <span class="menu-label">Actions</span>
+      <button (click)="exportCSV()">⬇ Export CSV</button>
+      <button (click)="exportPDF()">⬇ Export PDF</button>
+      <button (click)="loadLoans()">↻ Refresh</button>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Toast -->
+    <div *ngIf="toast.text" class="toast" [class.success]="toast.type==='success'"
+         [class.error]="toast.type==='error'" [class.info]="toast.type==='info'">
+      {{ toast.text }}
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card approved">Approved: {{ stats.approved }}</div>
+      <div class="stat-card pending">Pending: {{ stats.pending }}</div>
+      <div class="stat-card rejected">Rejected: {{ stats.rejected }}</div>
+      <div class="stat-card withdrawn">Withdrawn: {{ stats.withdrawn }}</div>
+      <div class="stat-card closed">Closed: {{ stats.closed }}</div>
+    </div>
+
+    <!-- Filters -->
+    <div class="card filters-card">
+      <h2>Search & Filters</h2>
+      <div class="filters">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search by Loan #, User ID, Name, Type, Purpose" />
+
+        <select [(ngModel)]="statusFilter">
+          <option value="">All Status</option>
+          <option>Pending</option>
+          <option>Approved</option>
+          <option>Rejected</option>
+          <option>Withdrawn</option>
+          <option>Closed</option>
+        </select>
+
+        <input type="number" [(ngModel)]="minAmount" placeholder="Min Amount" />
+        <input type="number" [(ngModel)]="maxAmount" placeholder="Max Amount" />
+
+        <button class="btn" (click)="clearFilters()">Clear</button>
+      </div>
+    </div>
+
+    <!-- Loan Cards (wrapper id used by exportPDF) -->
+    <div id="loansTable" class="loan-cards">
+      <div class="loan-card" *ngFor="let loan of getFilteredLoans(); let i = index">
+        <div class="loan-header">
+          <div>
+            <h3>{{ loan.type }} — Loan #{{ loan.loanId }}</h3>
+            <div class="muted">Applicant: {{ loan.applicantName }} • UserID: {{ loan.userId }}</div>
+          </div>
+
+          <div>
+            <span class="status" [ngClass]="loan.status.toLowerCase()">{{ loan.status }}</span>
+            <div class="amount">₹{{ loan.amount | number }}</div>
+          </div>
+        </div>
+
+        <p><strong>Tenure:</strong> {{ loan.tenure || loan.tenureYears || '-' }}</p>
+        <p><strong>Purpose:</strong> {{ loan.purpose }}</p>
+        <p class="muted"><strong>Applied:</strong> {{ loan.createdAt | date:'medium' }}</p>
+
+        <!-- Repayment Pie Chart -->
+        <div *ngIf="loan.amount" class="loan-chart">
+          <!-- #loanChart canvases are collected by ViewChildren in the TS -->
+          <canvas #loanChart></canvas>
+          <div class="chart-center">
+            <div class="chart-percent">{{ getRepaymentPercent(loan) }}%</div>
+            <div class="chart-sub">repaid</div>
+          </div>
+        </div>
+
+        <!-- Documents -->
+        <div class="loan-docs">
+          <strong>Documents:</strong>
+          <div *ngIf="!loan.documents?.length" class="muted">No documents.</div>
+          <div class="doc-list" *ngIf="loan.documents?.length">
+            <ng-container *ngFor="let d of loan.documents">
+              <div class="doc-item">
+                <ng-container *ngIf="isImage(d); else nonImage">
+                  <img [src]="d" alt="doc" class="doc-thumb" (click)="openImage(d)" />
+                </ng-container>
+                <ng-template #nonImage>
+                  <a [href]="d" target="_blank">Open document</a>
+                </ng-template>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="row-actions">
+          <button *ngIf="loan.status==='Pending'" class="btn btn-success" (click)="updateStatus(loan,'Approved')">✔ Approve</button>
+          <button *ngIf="loan.status==='Pending'" class="btn btn-danger" (click)="updateStatus(loan,'Rejected')">✖ Reject</button>
+
+          <!-- Manager can close approved loans -->
+          <button *ngIf="loan.status==='Approved'" class="btn btn-secondary" (click)="updateStatus(loan,'Closed')">Close Loan</button>
+
+          <!-- View repayments for approved/closed loans (or any loan with repayments) -->
+          <button *ngIf="(loan.repayments?.length > 0) || loan.status==='Approved' || loan.status==='Closed'"
+                  class="btn btn-primary" (click)="openPaymentsModal(loan)">View Repayments</button>
+
+          <span *ngIf="loan.status==='Rejected' || loan.status==='Withdrawn'" class="muted">—</span>
         </div>
       </div>
-  
-      <nav class="menu">
-        <span class="menu-label">Actions</span>
-        <button (click)="exportCSV()">⬇ Export CSV</button>
-        <button (click)="exportPDF()">⬇ Export PDF</button>
-        <button (click)="loadLoans()">↻ Refresh</button>
-      </nav>
-    </aside>
-  
-    <!-- Main content -->
-    <section class="content">
-      <!-- Toast -->
-      <div *ngIf="toast.text" class="toast"
-           [class.success]="toast.type==='success'"
-           [class.error]="toast.type==='error'"
-           [class.info]="toast.type==='info'">
-        {{ toast.text }}
+    </div>
+
+    <!-- Repayments Modal -->
+    <div class="modal" *ngIf="selectedLoanPayments">
+      <div class="modal-body">
+        <button class="close" (click)="closePaymentsModal()">×</button>
+
+        <h3>{{ selectedLoanPayments.type }} — Loan #{{ selectedLoanPayments.loanId }}</h3>
+        <p><strong>Applicant:</strong> {{ selectedLoanPayments.applicantName }}</p>
+        <p><strong>Amount:</strong> ₹{{ selectedLoanPayments.amount | number }}</p>
+        <p><strong>Status:</strong> {{ selectedLoanPayments.status }}</p>
+
+        <h4>Payment History</h4>
+        <div *ngIf="!selectedLoanPayments.repayments?.length" class="muted">No payments yet.</div>
+        <table *ngIf="selectedLoanPayments.repayments?.length" class="payments-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount (₹)</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of selectedLoanPayments.repayments">
+              <td>{{ p.date | date:'short' }}</td>
+              <td>{{ p.amount | number }}</td>
+              <td>{{ p.type }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-  
-      <!-- Stats -->
-      <div class="stats">
-        <div class="stat-card approved">Approved: {{ stats.approved }}</div>
-        <div class="stat-card pending">Pending: {{ stats.pending }}</div>
-        <div class="stat-card rejected">Rejected: {{ stats.rejected }}</div>
-        <div class="stat-card withdrawn">Withdrawn: {{ stats.withdrawn }}</div>
+    </div>
+
+    <!-- Image Popup Modal -->
+    <div class="image-modal" *ngIf="selectedImage">
+      <div class="overlay" (click)="closeImage()"></div>
+      <div class="image-box" role="dialog" aria-modal="true">
+        <button class="close-btn" (click)="closeImage()">×</button>
+        <img [src]="selectedImage" alt="Full view" />
       </div>
-  
-      <!-- Filters -->
-      <div class="card">
-        <h2>Search & Filters</h2>
-        <div class="filters">
-          <input
-            type="text"
-            [(ngModel)]="searchTerm"
-            placeholder="Search by Loan #, User ID, Name, Type, Purpose" />
-  
-          <select [(ngModel)]="statusFilter">
-            <option value="">All Status</option>
-            <option>Pending</option>
-            <option>Approved</option>
-            <option>Rejected</option>
-            <option>Withdrawn</option>
-          </select>
-  
-          <input type="number" [(ngModel)]="minAmount" placeholder="Min Amount" />
-          <input type="number" [(ngModel)]="maxAmount" placeholder="Max Amount" />
-  
-          <button class="btn" (click)="clearFilters()">Clear</button>
-        </div>
-      </div>
-  
-      <!-- Table -->
-      <div class="card">
-        <h2>All Loan Applications</h2>
-  
-        <div class="table-wrap" *ngIf="getFilteredLoans().length; else empty">
-          <table id="loansTable">
-            <thead>
-              <tr>
-                <th>Loan #</th>
-                <th>User ID</th>
-                <th>Applicant</th>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Tenure</th>
-                <th>Purpose</th>
-                <th>Documents</th>
-                <th>Status</th>
-                <th>Applied On</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-  
-            <tbody>
-              <tr *ngFor="let loan of getFilteredLoans()">
-                <td>{{ loan.loanId }}</td>
-                <td>{{ loan.userId }}</td>
-                <td>{{ loan.applicantName }}</td>
-                <td>{{ loan.type }}</td>
-                <td>₹ {{ loan.amount | number }}</td>
-                <td>{{ loan.tenure }}</td>
-                <td>{{ loan.purpose }}</td>
-                <td>
-                  <ng-container *ngIf="loan.documents?.length; else noDocs">
-                    <ul class="muted" style="padding-left: 16px; margin: 0;">
-                      <li *ngFor="let doc of loan.documents; let i = index">
-                        <a [href]="doc" target="_blank" class="link">Document {{ i + 1 }}</a>
-                      </li>
-                    </ul>
-                  </ng-container>
-                  <ng-template #noDocs><span class="muted">No Files</span></ng-template>
-                </td>
-  
-                <td>
-                  <span class="badge"
-                    [class.badge-pending]="loan.status === 'Pending'"
-                    [class.badge-approved]="loan.status === 'Approved'"
-                    [class.badge-rejected]="loan.status === 'Rejected'"
-                    [class.badge-withdrawn]="loan.status === 'Withdrawn'">
-                    {{ loan.status }}
-                  </span>
-                </td>
-  
-                <td>{{ loan.createdAt | date:'medium' }}</td>
-  
-                <td class="row-actions">
-                  <button *ngIf="loan.status==='Pending'"
-                          (click)="updateStatus(loan,'Approved')"
-                          class="btn btn-success">✔ Approve</button>
-  
-                  <button *ngIf="loan.status==='Pending'"
-                          (click)="updateStatus(loan,'Rejected')"
-                          class="btn btn-danger">✖ Reject</button>
-  
-                  <span *ngIf="loan.status!=='Pending'" class="muted">—</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-  
-        <ng-template #empty>
-          <p class="muted">No loans match the filters.</p>
-        </ng-template>
-      </div>
-    </section>
-  </div>
-  
+    </div>
+  </section>
+</div>

@@ -1,166 +1,240 @@
 <div class="loan-layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="user-chip">
-        <div class="avatar">{{ user?.name?.[0] || '?' }}</div>
-        <div class="user-info">
-          <div class="hello">Welcome,</div>
-          <div class="name">{{ user?.name }}</div>
-        </div>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="user-chip">
+      <div class="avatar">{{ user?.name?.[0] || '?' }}</div>
+      <div class="user-info">
+        <div class="hello">Welcome,</div>
+        <div class="name">{{ user?.name }}</div>
       </div>
-  
-      <nav class="menu">
-        <button [class.active]="activeTab === 'apply'" (click)="setTab('apply')">Apply Loan</button>
-        <button [class.active]="activeTab === 'status'" (click)="setTab('status')">Check Status</button>
-      </nav>
-  
-      <button class="logout" (click)="logout()">Logout</button>
-    </aside>
-  
-    <!-- Main content -->
-    <section class="content">
-      <!-- Toast -->
-      <div *ngIf="toast.text" class="toast"
-           [class.success]="toast.type==='success'"
-           [class.error]="toast.type==='error'"
-           [class.info]="toast.type==='info'">
-        {{ toast.text }}
-      </div>
-  
-      <!-- Apply -->
-      <div *ngIf="activeTab === 'apply'" class="card">
-        <h2>Apply for a Loan</h2>
-        <form (ngSubmit)="applyLoan()" class="form-grid">
-  
-          <label>
-            Loan Type
-            <select [(ngModel)]="loanForm.type" name="type" required>
-              <option value="" disabled>Select type</option>
-              <option>Home Loan</option>
-              <option>Personal Loan</option>
-              <option>Car Loan</option>
-              <option>Education Loan</option>
-              <option>Business Loan</option>
-            </select>
-          </label>
-  
-          <label>
-            Amount
-            <input type="number" [(ngModel)]="loanForm.amount" name="amount" min="1000" required placeholder="e.g. 250000" />
-          </label>
-  
-          <label>
-            Tenure
-            <select [(ngModel)]="loanForm.tenure" name="tenure" required>
-              <option value="" disabled>Select tenure</option>
-              <option>1 Year</option>
-              <option>3 Years</option>
-              <option>5 Years</option>
-              <option>10 Years</option>
-              <option>15 Years</option>
-            </select>
-          </label>
-  
-          <label class="full">
-            Purpose
-            <input type="text" [(ngModel)]="loanForm.purpose" name="purpose" required placeholder="Reason for the loan" />
-          </label>
-  
-<!-- ✅ Multiple File Upload with Remove Option -->
-<label class="full">
-    Upload Documents
-    <input
-      type="file"
-      (change)="onFileChange($event)"
-      multiple
-      class="form-control"
-    />
-    <small class="muted">Accepted: PDF, JPG, PNG (Max ~2MB each)</small>
-  </label>
-  
-  <!-- Show selected files with delete option -->
-  <ul *ngIf="fileNames.length" class="muted">
-    <li *ngFor="let name of fileNames; let i = index">
-      {{ name }}
-      <button type="button" (click)="removeFile(i)" class="btn btn-sm btn-danger">
-        ✕
-      </button>
-    </li>
-  </ul>
-  
-          <div class="actions">
-            <button type="submit">Submit Application</button>
+    </div>
+
+    <nav class="menu">
+      <button [class.active]="activeTab === 'apply'" (click)="setTab('apply')">Apply Loan</button>
+      <button [class.active]="activeTab === 'status'" (click)="setTab('status')">Check Status</button>
+      <button [class.active]="activeTab === 'repay'" (click)="setTab('repay')">Repay</button>
+    </nav>
+
+    <button class="logout" (click)="logout()">Logout</button>
+  </aside>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <div *ngIf="toast.text" class="toast"
+         [class.success]="toast.type==='success'"
+         [class.error]="toast.type==='error'"
+         [class.info]="toast.type==='info'">
+      {{ toast.text }}
+    </div>
+
+    <!-- Apply -->
+    <div *ngIf="activeTab === 'apply'" class="card animate">
+      <h2 class="page-title">Apply for a Loan</h2>
+      <form (ngSubmit)="applyLoan()" class="form-grid">
+        <label>
+          Loan Type
+          <select [(ngModel)]="loanForm.type" name="type" required>
+            <option value="" disabled>Select type</option>
+            <option>Home Loan</option>
+            <option>Personal Loan</option>
+            <option>Car Loan</option>
+            <option>Education Loan</option>
+            <option>Business Loan</option>
+          </select>
+        </label>
+
+        <label>
+          Amount (₹)
+          <input type="number" [(ngModel)]="loanForm.amount" name="amount" min="1" required placeholder="e.g. 250000" />
+        </label>
+
+        <label>
+          Tenure (years)
+          <select [(ngModel)]="loanForm.tenureYears" name="tenureYears">
+            <option [value]="1">1 Year</option>
+            <option [value]="3">3 Years</option>
+            <option [value]="5">5 Years</option>
+            <option [value]="10">10 Years</option>
+            <option [value]="15">15 Years</option>
+          </select>
+        </label>
+
+        <label>
+          Repayment option
+          <div style="display:flex;gap:12px;margin-top:8px;">
+            <label><input type="radio" name="paymentOption" [(ngModel)]="loanForm.paymentOption" value="emi" /> EMI</label>
+            <label><input type="radio" name="paymentOption" [(ngModel)]="loanForm.paymentOption" value="full" /> Full payment</label>
           </div>
-        </form>
-      </div>
-  
-      <!-- Status -->
-      <div *ngIf="activeTab === 'status'" class="card">
-        <h2>Your Applications</h2>
-        <div class="table-wrap" *ngIf="myLoans?.length; else empty">
-          <table>
-            <thead>
-              <tr>
-                <th>Loan #</th>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Tenure</th>
-                <th>Purpose</th>
-                <th>Documents</th>
-                <th>Status</th>
-                <th>Applied On</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let loan of myLoans">
-                <td>{{ loan.loanId }}</td>
-                <td>{{ loan.type }}</td>
-                <td>₹ {{ loan.amount | number }}</td>
-                <td>{{ loan.tenure }}</td>
-                <td>{{ loan.purpose }}</td>
-                <td>
-                    <ng-container *ngIf="loan.documents?.length; else noDocs">
-                      <ul class="muted" style="padding-left: 16px;">
-                        <li *ngFor="let doc of loan.documents; let i = index">
-                          <a [href]="doc" target="_blank" class="link">
-                            Document {{ i + 1 }}
-                          </a>
-                        </li>
-                      </ul>
-                    </ng-container>
-                    <ng-template #noDocs>
-                      <span class="muted">No Files</span>
-                    </ng-template>
-                  </td>
-                  
-                <td>
-                  <span class="badge"
-                        [class.badge-pending]="loan.status === 'Pending'"
-                        [class.badge-approved]="loan.status === 'Approved'"
-                        [class.badge-rejected]="loan.status === 'Rejected'"
-                        [class.badge-withdrawn]="loan.status === 'Withdrawn'">
-                    {{ loan.status }}
-                  </span>
-                </td>
-                <td>{{ loan.createdAt | date:'medium' }}</td>
-                <td>
-                  <button class="link"
-                          (click)="withdraw(loan)"
-                          [disabled]="loan.status !== 'Pending'">
-                    Withdraw
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        </label>
+
+        <label class="full">
+          Purpose
+          <input type="text" [(ngModel)]="loanForm.purpose" name="purpose" required placeholder="Reason for the loan" />
+        </label>
+
+        <label class="full">
+          Upload Documents
+          <input type="file" (change)="onFileChange($event)" multiple class="form-control" />
+          <small class="muted">Accepted: PDF, JPG, PNG</small>
+        </label>
+
+        <ul *ngIf="fileNames.length" class="muted uploaded-list">
+          <li *ngFor="let name of fileNames; let i = index">
+            {{ name }}
+            <button type="button" (click)="removeFile(i)" class="btn btn-sm btn-danger">✕</button>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <button type="submit">Submit Application</button>
         </div>
-  
-        <ng-template #empty>
-          <p class="muted">No applications yet. Apply for your first loan!</p>
-        </ng-template>
+      </form>
+    </div>
+
+    <!-- Status: cards list -->
+    <div *ngIf="activeTab === 'status'" class="card animate">
+      <h2 class="page-title">Your Applications</h2>
+
+      <div *ngIf="myLoans?.length; else emptyStatus">
+        <div class="loan-cards">
+          <div *ngFor="let loan of myLoans" class="loan-card">
+            <div class="card-header">
+              <div>
+                <strong>{{ loan.type }}</strong>
+                <div class="muted">Loan #{{ loan.loanId || loan._id || loan.id }}</div>
+              </div>
+              <div style="text-align:right">
+                <div class="amount">₹{{ loan.amount | number }}</div>
+                <div class="muted">Applied: {{ loan.createdAt | date:'medium' }}</div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="left">
+                <p><strong>Tenure:</strong> {{ loan.tenureYears }} yr(s) • <strong>Payment:</strong> {{ loan.paymentOption }}</p>
+                <p><strong>Purpose:</strong> {{ loan.purpose }}</p>
+
+                <div class="status-tracker">
+                  <div class="steps">
+                    <div *ngFor="let s of statusSteps; let idx = index" class="step" [class.active]="isStepActive(loan.status, idx)">
+                      <div class="dot">{{ idx+1 }}</div>
+                      <div class="label">{{ s }}</div>
+                    </div>
+                  </div>
+                  <div class="progress-line">
+                    <div class="progress" [style.width.%]="getStatusProgress(loan.status)"></div>
+                  </div>
+                </div>
+
+                <div class="docs">
+                  <strong>Documents</strong>
+                  <div *ngIf="(loan.documents || []).length === 0" class="muted">No documents uploaded.</div>
+                  <div class="doc-list">
+                    <ng-container *ngFor="let d of (loan.documents || [])">
+                      <div class="doc-item">
+                        <ng-container *ngIf="isImage(d)">
+                          <img [src]="d" alt="doc" />
+                        </ng-container>
+                        <ng-container *ngIf="!isImage(d)">
+                          <a [href]="d" target="_blank">Open document</a>
+                        </ng-container>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="right">
+                <div class="badge-wrap">
+                  <span class="badge" [ngClass]="badgeClass(loan.status)">{{ loan.status }}</span>
+                </div>
+
+                <div class="card-actions">
+                  <button *ngIf="loan.status==='Pending'" (click)="withdraw(loan)" class="btn-action">Withdraw</button>
+                  <button (click)="openLoanDetails(loan)" class="btn-action">Details</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-  
-    </section>
-  </div>
-  
+
+      <ng-template #emptyStatus>
+        <p class="muted">No applications yet. Apply for your first loan!</p>
+      </ng-template>
+    </div>
+
+    <!-- Repay -->
+    <div *ngIf="activeTab === 'repay'" class="card animate">
+      <h2 class="page-title">Repayments</h2>
+
+      <div *ngIf="!repayLoans?.length" class="muted">No approved loans to repay yet.</div>
+
+      <div *ngFor="let loan of repayLoans" class="loan-row repay-card">
+        <div class="loan-summary">
+          <div>
+            <strong>{{ loan.type }}</strong> — Loan #{{ loan.loanId || loan._id || loan.id }}
+            <div>Amount: ₹{{ loan.amount | number }} • Status: {{ loan.status }}</div>
+            <div>Paid: ₹{{ loan.totalPaid || 0 }} / ₹{{ loan.amount | number }}</div>
+            <div *ngIf="loan.repaymentMonths">EMI: ₹{{ loan.monthlyInstallment }} for {{ loan.repaymentMonths }} months</div>
+            <div class="muted">Purpose: {{ loan.purpose }}</div>
+          </div>
+
+          <div style="text-align:right; min-width:220px;">
+            <div class="actions-row">
+              <button (click)="openLoanDetails(loan)" class="btn action-primary">Details</button>
+              <button (click)="payMonthly(loan)" [disabled]="loan.status==='Closed'" class="btn action-primary">Pay Monthly</button>
+              <button (click)="payFull(loan)" [disabled]="loan.status==='Closed'" class="btn action-primary">Pay Full</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loan details modal -->
+      <div class="modal" *ngIf="selectedLoanForDetails">
+        <div class="modal-body">
+          <button class="close" (click)="closeLoanDetails()">✕</button>
+          <h3>{{ selectedLoanForDetails.type }} — Loan #{{ selectedLoanForDetails.loanId || selectedLoanForDetails._id || selectedLoanForDetails.id }}</h3>
+          <p><strong>Applicant:</strong> {{ selectedLoanForDetails.applicantName }}</p>
+          <p><strong>Amount:</strong> ₹{{ selectedLoanForDetails.amount | number }}</p>
+          <p><strong>Monthly Installment:</strong> ₹{{ selectedLoanForDetails.monthlyInstallment }}</p>
+          <p><strong>Total Paid:</strong> ₹{{ selectedLoanForDetails.totalPaid || 0 }}</p>
+          <p><strong>Status:</strong> {{ selectedLoanForDetails.status }}</p>
+
+          <div class="docs modal-docs">
+            <strong>Documents</strong>
+            <div *ngIf="(selectedLoanForDetails.documents || []).length === 0" class="muted">No documents.</div>
+            <div class="doc-list">
+              <ng-container *ngFor="let d of (selectedLoanForDetails.documents || [])">
+                <div class="doc-item">
+                  <ng-container *ngIf="isImage(d)">
+                    <img [src]="d" alt="doc" />
+                  </ng-container>
+                  <ng-container *ngIf="!isImage(d)">
+                    <a [href]="d" target="_blank">Open document</a>
+                  </ng-container>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+
+          <div class="actions-row">
+            <button (click)="payMonthly(selectedLoanForDetails)" [disabled]="selectedLoanForDetails.status==='Closed'">Pay Monthly</button>
+            <button (click)="payFull(selectedLoanForDetails)" [disabled]="selectedLoanForDetails.status==='Closed'">Pay Full</button>
+          </div>
+
+          <h4>Payment History</h4>
+          <div *ngIf="(selectedLoanForDetails.repayments || []).length === 0" class="muted">No payments yet.</div>
+          <ul>
+            <li *ngFor="let p of selectedLoanForDetails.repayments">
+              {{ p.date | date:'short' }} — ₹{{ p.amount }} ({{ p.type }})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

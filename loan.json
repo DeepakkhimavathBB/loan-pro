@@ -1,489 +1,981 @@
 {
   "loans": [
     {
-      "id": "c490",
-      "loanId": 1755711692235,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
+      "id": "ea616ce4-4df9-4c8e-81f0-b9da313e93de",
+      "loanId": 1757338825032,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
       "type": "Home Loan",
-      "amount": 5000000,
-      "tenure": "15 Years",
-      "purpose": "Construction of house ",
-      "status": "Rejected",
-      "createdAt": "2025-08-20T17:41:32.235Z"
-    },
-    {
-      "id": "fffd",
-      "loanId": 1755711746531,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Personal Loan",
-      "amount": 200000,
-      "tenure": "10 Years",
-      "purpose": "Buisness",
-      "status": "Withdrawn",
-      "createdAt": "2025-08-20T17:42:26.531Z"
-    },
-    {
-      "id": "7b30",
-      "loanId": 1755711903058,
-      "userId": "b077",
-      "applicantName": "Chirag",
-      "type": "Business Loan",
-      "amount": 30000,
-      "tenure": "5 Years",
-      "purpose": "for buisness purpose ",
-      "status": "Rejected",
-      "createdAt": "2025-08-20T17:45:03.059Z"
-    },
-    {
-      "id": "66ac",
-      "loanId": 1755712839816,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Car Loan",
-      "amount": 9000000000,
-      "tenure": "15 Years",
-      "purpose": "Construction of house ",
-      "documents": [
-        "assets/uploads/hero-bg.jpg"
+      "amount": 100000,
+      "tenureYears": 3,
+      "repaymentMonths": 36,
+      "paymentOption": "emi",
+      "monthlyInstallment": 2778,
+      "totalPaid": 111112,
+      "repayments": [
+        {
+          "id": "20e38455-7af1-4138-9118-28016d21fcab",
+          "date": "2025-09-08T13:42:32.654Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "09c4a9c7-9fd8-4f5d-bcf0-fbed5b0889b7",
+          "date": "2025-09-08T13:42:43.795Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "4b3e7090-3e60-4930-a0be-421936a4c312",
+          "date": "2025-09-08T13:42:49.148Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "332a5da3-d663-4e5b-b9e0-db31f48c1a17",
+          "date": "2025-09-08T13:42:55.084Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "f6b7117b-907f-4330-980c-51a2dbb2939e",
+          "date": "2025-09-08T13:42:57.536Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "48fc593b-0930-47bf-b5b7-939b50c5175f",
+          "date": "2025-09-08T13:46:27.576Z",
+          "amount": 86110,
+          "type": "full"
+        },
+        {
+          "id": "ca1e7bb4-ec21-4e69-832e-566d95bb153e",
+          "date": "2025-09-08T14:29:08.107Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "c02a87fb-a928-4947-bb5b-85c6a65d1eae",
+          "date": "2025-09-08T14:29:08.906Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "136ab214-ad0d-41ac-95a1-6ab506a0ba0f",
+          "date": "2025-09-08T14:29:12.957Z",
+          "amount": 2778,
+          "type": "monthly"
+        },
+        {
+          "id": "7aa659c1-1ff6-4127-bc89-0c76e65e3227",
+          "date": "2025-09-08T14:29:14.207Z",
+          "amount": 2778,
+          "type": "monthly"
+        }
       ],
-      "status": "Approved",
-      "createdAt": "2025-08-20T18:00:39.816Z"
-    },
-    {
-      "id": "1e92",
-      "loanId": 1755712914193,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Personal Loan",
-      "amount": 3245766,
-      "tenure": "10 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "assets/uploads/login.png"
-      ],
-      "status": "Rejected",
-      "createdAt": "2025-08-20T18:01:54.193Z"
-    },
-    {
-      "id": "4ef9",
-      "loanId": 1755715945718,
-      "userId": "4a94",
-      "applicantName": "Anusha",
-      "type": "Personal Loan",
-      "amount": 12345,
-      "tenure": "3 Years",
-      "purpose": "Construction of house ",
-      "documents": [
-        "http://localhost:5000/uploads/1755715945709-254907344-login.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-20T18:52:25.718Z"
-    },
-    {
-      "id": "54ec",
-      "loanId": 1755715983561,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Car Loan",
-      "amount": 23456789,
-      "tenure": "15 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755715983555-36314268-login.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-20T18:53:03.561Z"
-    },
-    {
-      "id": "a6bb",
-      "loanId": 1755718847381,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Car Loan",
-      "amount": 765434,
-      "tenure": "5 Years",
-      "purpose": "Buisness",
-      "documents": [
-        "http://localhost:5000/uploads/1755718847375-375590343-login.png",
-        "http://localhost:5000/uploads/1755718847377-275028608-hero-bg.jpg"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-20T19:40:47.381Z"
-    },
-    {
-      "id": "da22",
-      "loanId": 1755721160564,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Car Loan",
-      "amount": 23456765,
-      "tenure": "10 Years",
-      "purpose": "personal ",
-      "documents": [
-        "http://localhost:5000/uploads/1755721160537-474398538-login.png",
-        "http://localhost:5000/uploads/1755721160539-706386750-img2.png",
-        "http://localhost:5000/uploads/1755721160542-268392150-shared image.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-20T20:19:20.564Z"
-    },
-    {
-      "id": "6036",
-      "loanId": 1755726434921,
-      "userId": "6f1d",
-      "applicantName": "uttam",
-      "type": "Car Loan",
-      "amount": 345678,
-      "tenure": "3 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755726434917-997022994-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-20T21:47:14.921Z"
-    },
-    {
-      "id": "65cc",
-      "loanId": 1755754878521,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Personal Loan",
-      "amount": 3456789876,
-      "tenure": "10 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755754878504-494905802-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
-      ],
-      "status": "Rejected",
-      "createdAt": "2025-08-21T05:41:18.521Z"
-    },
-    {
-      "id": "61a0",
-      "loanId": 1755755036725,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Home Loan",
-      "amount": 45678,
-      "tenure": "10 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755755036720-807260971-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
-      ],
-      "status": "Withdrawn",
-      "createdAt": "2025-08-21T05:43:56.725Z"
-    },
-    {
-      "id": "85b1",
-      "loanId": 1755755360770,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Personal Loan",
-      "amount": 6667775,
-      "tenure": "5 Years",
-      "purpose": "hehe",
-      "documents": [
-        "http://localhost:5000/uploads/1755755360689-358533015-loans (1).pdf"
-      ],
-      "status": "Rejected",
-      "createdAt": "2025-08-21T05:49:20.770Z"
-    },
-    {
-      "id": "e726",
-      "loanId": 1755771204657,
-      "userId": "6047",
-      "applicantName": "Kushal",
-      "type": "Home Loan",
-      "amount": 500000,
-      "tenure": "15 Years",
       "purpose": "Construction of house ",
       "documents": [
-        "http://localhost:5000/uploads/1755771204646-501278673-e5f70fb7-57b5-4cd4-a520-caf15dff69fa.jpg"
+        "http://localhost:5000/uploads/1757338825008-592900105-ETS tools.png"
       ],
-      "status": "Approved",
-      "createdAt": "2025-08-21T10:13:24.657Z"
+      "status": "Closed",
+      "createdAt": "2025-09-08T13:40:25.046Z"
     },
     {
-      "id": "dc6e",
-      "loanId": 1755864204760,
-      "userId": "f5e7",
-      "applicantName": "DeepakKhimavath",
-      "type": "Home Loan",
-      "amount": 21345,
-      "tenure": "5 Years",
-      "purpose": "Construction of house ",
+      "id": "1382a39b-d149-4f0f-a65e-3524e2909bd5",
+      "loanId": 1757339304064,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Education Loan",
+      "amount": 10000,
+      "tenureYears": 5,
+      "repaymentMonths": 1,
+      "paymentOption": "full",
+      "monthlyInstallment": 10000,
+      "totalPaid": 10000,
+      "repayments": [
+        {
+          "id": "03c91c12-2c26-4af6-b5b7-c8b05ee7042b",
+          "date": "2025-09-08T13:49:44.915Z",
+          "amount": 10000,
+          "type": "monthly"
+        }
+      ],
+      "purpose": "education",
       "documents": [
-        "http://localhost:5000/uploads/1755864204715-92059625-ngrok-v3-stable-windows-amd64.zip"
+        "http://localhost:5000/uploads/1757339304047-740423645-ETS tools.png"
       ],
-      "status": "Approved",
-      "createdAt": "2025-08-22T12:03:24.760Z"
+      "status": "Closed",
+      "createdAt": "2025-09-08T13:48:24.064Z"
     },
     {
-      "id": "3b61",
-      "loanId": 1755961657484,
-      "userId": 2,
-      "applicantName": "deepak",
-      "type": "Home Loan",
-      "amount": 23456789,
-      "tenure": "3 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755961657365-919500063-Screenshot 2025-08-21 183111.png",
-        "http://localhost:5000/uploads/1755961657373-523207262-loans (1).pdf"
-      ],
-      "status": "Rejected",
-      "createdAt": "2025-08-23T15:07:37.484Z"
-    },
-    {
-      "id": "ba01",
-      "loanId": 1755961774860,
-      "userId": 2,
-      "applicantName": "deepak",
-      "type": "Car Loan",
-      "amount": 250000,
-      "tenure": "5 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755961774852-316995650-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-23T15:09:34.860Z"
-    },
-    {
-      "id": "701f",
-      "loanId": 1755962629024,
-      "userId": 3,
-      "applicantName": "Deepak",
-      "type": "Home Loan",
-      "amount": 50000000000,
-      "tenure": "1 Year",
-      "purpose": "for construction of villa ",
-      "documents": [
-        "http://localhost:5000/uploads/1755962629019-298463416-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-23T15:23:49.024Z"
-    },
-    {
-      "id": "c189",
-      "loanId": 1755963389541,
-      "userId": 3,
-      "applicantName": "Deepak",
-      "type": "Car Loan",
-      "amount": 243556,
-      "tenure": "5 Years",
-      "purpose": "Buisness",
-      "documents": [
-        "http://localhost:5000/uploads/1755963389538-748467760-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-23T15:36:29.542Z"
-    },
-    {
-      "id": "21f9",
-      "loanId": 1755963761392,
-      "userId": 4,
-      "applicantName": "Deepak",
-      "type": "Car Loan",
-      "amount": 23456765445765644,
-      "tenure": "3 Years",
-      "purpose": "Buisnes",
-      "documents": [
-        "http://localhost:5000/uploads/1755963761388-283641306-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-23T15:42:41.392Z"
-    },
-    {
-      "id": "d38d",
-      "loanId": 1755963978535,
-      "userId": 1,
-      "applicantName": "asdfg",
-      "type": "Personal Loan",
-      "amount": 234567654,
-      "tenure": "3 Years",
-      "purpose": "Buisness",
-      "documents": [
-        "http://localhost:5000/uploads/1755963978529-230484461-Screenshot 2025-08-21 183111.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-23T15:46:18.535Z"
-    },
-    {
-      "id": "c392",
-      "loanId": 1755964133941,
-      "userId": 3,
-      "applicantName": "Deepak",
-      "type": "Home Loan",
-      "amount": 345678987654323460,
-      "tenure": "3 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755964133935-190803440-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved",
-      "createdAt": "2025-08-23T15:48:53.941Z"
-    },
-    {
-      "id": "a74afabd-bf28-4fe8-8332-ead7cdfc8945",
-      "createdAt": "2025-08-23T16:16:06.740Z",
-      "loanId": 1755965766740,
-      "userId": 2,
-      "applicantName": "Deepak",
-      "applicantEmail": "khimavathdeepak@gmail.com",
-      "type": "Home Loan",
-      "amount": 2345678,
-      "tenure": "5 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1755965766733-578237846-Screenshot 2025-08-21 183111.png"
-      ],
-      "status": "Approved"
-    },
-    {
-      "id": "08b5ab78-ff2a-4072-9f4d-6825a4c43e79",
-      "createdAt": "2025-08-23T16:20:34.670Z",
-      "loanId": 1755966034670,
-      "userId": 2,
-      "applicantName": "Deepak",
-      "applicantEmail": "khimavathdeepak@gmail.com",
-      "type": "Car Loan",
-      "amount": 345678,
-      "tenure": "5 Years",
-      "purpose": "Construction of house ",
-      "documents": [
-        "http://localhost:5000/uploads/1755966034663-282310000-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved"
-    },
-    {
-      "id": "a7ddf963-0402-4589-bb93-017f63a10904",
-      "createdAt": "2025-08-23T16:31:13.688Z",
-      "loanId": 1755966673688,
-      "userId": 2,
-      "applicantName": "Deepak Khimavath ",
-      "applicantEmail": "khimavathdeepak@gmail.com",
-      "type": "Business Loan",
-      "amount": 100000001000001000,
-      "tenure": "5 Years",
-      "purpose": "ull be reciving this inshort time ",
-      "documents": [
-        "http://localhost:5000/uploads/1755966673683-540638010-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Approved"
-    },
-    {
-      "id": "3a58d39f-9aaf-4d7f-a083-3a0b9932a48a",
-      "createdAt": "2025-08-23T16:33:50.109Z",
-      "loanId": 1755966830109,
-      "userId": 2,
-      "applicantName": "Deepak Khimavath ",
-      "applicantEmail": "khimavathdeepak@gmail.com",
-      "type": "Car Loan",
-      "amount": 234,
-      "tenure": "5 Years",
-      "purpose": "sdfgh",
-      "documents": [
-        "http://localhost:5000/uploads/1755966830103-108332497-Screenshot 2025-08-22 135736.png"
-      ],
-      "status": "Rejected"
-    },
-    {
-      "id": "f4f7fd2a-c877-47b1-aed6-c38e0d126747",
-      "createdAt": "2025-08-25T13:20:35.781Z",
-      "loanId": 1756128035781,
-      "userId": 3,
-      "applicantName": "Khushal",
-      "applicantEmail": "kushalkn11@gmail.com",
-      "type": "Business Loan",
-      "amount": 45666256,
-      "tenure": "10 Years",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1756128035762-536029242-Screenshot 2025-08-21 183111.png"
-      ],
-      "status": "Approved"
-    },
-    {
-      "id": "28608136-cb61-4964-891c-8bd8a10913c2",
-      "createdAt": "2025-09-04T04:15:45.845Z",
-      "loanId": 1756959345845,
-      "userId": 7,
-      "applicantName": "",
-      "applicantEmail": "khimavathd@gmail.com",
-      "type": "Personal Loan",
-      "amount": 234567890,
-      "tenure": "1 Year",
-      "purpose": "for buisness purpose ",
-      "documents": [
-        "http://localhost:5000/uploads/1756959345832-206519677-Sales.csv"
-      ],
-      "status": "Approved"
-    },
-    {
-      "id": "4dfe60d7-23bb-4062-b142-b8bacc91cd1a",
-      "createdAt": "2025-09-04T04:49:40.330Z",
-      "loanId": 1756961380330,
-      "userId": 9,
-      "applicantName": "q",
-      "applicantEmail": "q@gmail.com",
-      "type": "Personal Loan",
-      "amount": 2345678,
-      "tenure": "5 Years",
-      "purpose": "Construction of house ",
-      "documents": [
-        "http://localhost:5000/uploads/1756961380321-818555980-Screenshot 2025-09-03 122846.png"
-      ],
-      "status": "Approved"
-    },
-    {
-      "id": "d8ebe645-d33f-4e43-967c-50cb58fb5d34",
-      "createdAt": "2025-09-05T12:53:23.656Z",
-      "loanId": 1757076803656,
-      "userId": 10,
-      "applicantName": "h",
-      "applicantEmail": "h@gmail.com",
+      "id": "2c3fdd00-8e49-44ce-869a-5b13ddecfa80",
+      "loanId": 1757340118141,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
       "type": "Personal Loan",
       "amount": 1002,
-      "tenure": "5 Years",
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 84,
+      "totalPaid": 1008,
+      "repayments": [
+        {
+          "id": "6efd85ee-c801-431e-8786-5527e1f76f9e",
+          "date": "2025-09-08T18:26:28.890Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "74c9785d-7225-4bfa-b792-16cce3614999",
+          "date": "2025-09-08T18:26:30.816Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "c02559ca-758a-46f1-bd54-2604d6770d60",
+          "date": "2025-09-08T18:26:32.356Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "dc33a9a8-1eb0-4691-9dcb-64dd64dd89e3",
+          "date": "2025-09-08T18:26:33.727Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "651827f6-cbd7-47af-bac0-073977219549",
+          "date": "2025-09-08T18:26:34.953Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "2e188200-b75e-40de-b12c-81f65b3c96df",
+          "date": "2025-09-08T18:26:36.127Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "b16ac4bd-8156-4c37-9d35-5d75931dff11",
+          "date": "2025-09-08T18:26:37.275Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "a89c0acf-acaf-4c58-a147-ef8be1d4f160",
+          "date": "2025-09-08T18:26:38.279Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "71783f01-eaf0-4abc-a151-dac87243dd6a",
+          "date": "2025-09-08T18:26:40.196Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "8657e115-a183-426b-b31e-1d87fddc7edf",
+          "date": "2025-09-08T18:26:40.907Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "271e06bc-4cdb-43eb-aa4e-077c3166f925",
+          "date": "2025-09-08T18:26:42.650Z",
+          "amount": 84,
+          "type": "monthly"
+        },
+        {
+          "id": "e31e9e51-d148-4704-810f-77721d17bee9",
+          "date": "2025-09-08T18:26:43.920Z",
+          "amount": 84,
+          "type": "monthly"
+        }
+      ],
       "purpose": "for buisness purpose ",
       "documents": [
-        "http://localhost:5000/uploads/1757076803624-353961669-ETS tools.png"
+        "http://localhost:5000/uploads/1757340118133-208538547-ETS tools.png"
       ],
-      "status": "Withdrawn"
+      "status": "Closed",
+      "createdAt": "2025-09-08T14:01:58.144Z"
     },
     {
-      "id": "106ee478-fca1-4aa8-bd58-5207602faed5",
-      "createdAt": "2025-09-05T13:08:28.009Z",
-      "loanId": 1757077708009,
-      "userId": 11,
-      "applicantName": "Kushal",
+      "id": "2b0a5a35-d3c7-4b73-8bf3-d13617d6337f",
+      "loanId": 1757354819479,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Education Loan",
+      "amount": 456677,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 38057,
+      "totalPaid": 456677,
+      "repayments": [
+        {
+          "id": "1ebe58f0-0bf9-4698-81f9-a4179d2d2524",
+          "date": "2025-09-08T18:08:56.497Z",
+          "amount": 38057,
+          "type": "monthly"
+        },
+        {
+          "id": "94e0f54d-4f7c-40c1-acd9-84de270ed63e",
+          "date": "2025-09-08T18:08:59.009Z",
+          "amount": 418620,
+          "type": "full"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1757354819463-23630209-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-08T18:06:59.480Z"
+    },
+    {
+      "id": "478a9b90-79ce-4302-a96e-1be355d37650",
+      "loanId": 1757355755765,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Home Loan",
+      "amount": 23456,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 1955,
+      "totalPaid": 23456,
+      "repayments": [
+        {
+          "id": "192b941f-9c01-47e1-a629-ce988bac8142",
+          "date": "2025-09-08T18:24:16.855Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "6022dced-763f-4ecc-b4d7-800814b8acf8",
+          "date": "2025-09-08T18:24:28.966Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "b3c3ef0a-7dc8-45e3-b129-5855a9b20bea",
+          "date": "2025-09-08T18:24:31.069Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "f07bf99e-bbed-4ee1-989f-3616d4884ff9",
+          "date": "2025-09-08T18:24:31.971Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "fc3eb63d-41dd-45b9-8abd-50c8db6e0219",
+          "date": "2025-09-08T18:24:33.363Z",
+          "amount": 15636,
+          "type": "full"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1757355755757-419372361-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-08T18:22:35.765Z"
+    },
+    {
+      "id": "715e41d4-ab8e-4686-96fb-e23507ce13d6",
+      "loanId": 1757357503208,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 234567,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 19548,
+      "totalPaid": 0,
+      "repayments": [],
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1757357503195-727013927-ETS tools.png",
+        "http://localhost:5000/uploads/1757357503201-401289310-Screenshot 2025-09-04 152941.png",
+        "http://localhost:5000/uploads/1757357503203-504573508-Screenshot 2025-09-03 122846.png"
+      ],
+      "status": "Withdrawn",
+      "createdAt": "2025-09-08T18:51:43.211Z"
+    },
+    {
+      "id": "a5b09dda-e6fc-40d6-b38d-36727dbdf4d9",
+      "loanId": 1757357568753,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 23456546,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 1954713,
+      "totalPaid": 23456546,
+      "repayments": [
+        {
+          "id": "a01a53df-7577-4795-bbd9-52c0948579d5",
+          "date": "2025-09-08T19:00:14.575Z",
+          "amount": 1954713,
+          "type": "monthly"
+        },
+        {
+          "id": "14d417d8-effa-41c5-be43-8e5e4720dc82",
+          "date": "2025-09-08T19:00:16.447Z",
+          "amount": 1954713,
+          "type": "monthly"
+        },
+        {
+          "id": "76c7d24c-dd67-4393-b981-a7d21c76a4e6",
+          "date": "2025-09-08T19:00:17.795Z",
+          "amount": 19547120,
+          "type": "full"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1757357568739-702554027-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-08T18:52:48.741Z"
+    },
+    {
+      "id": "d72835c8-1b60-4b12-8866-3e96567d0e2c",
+      "loanId": 1757358911561,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 5433443,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 452787,
+      "totalPaid": 5433443,
+      "repayments": [
+        {
+          "id": "3a0123f4-14d9-48cb-aa78-c42c924263ee",
+          "date": "2025-09-08T19:16:45.502Z",
+          "amount": 452787,
+          "type": "monthly"
+        },
+        {
+          "id": "9b822884-0b3f-4136-b7d7-4501ad9e9841",
+          "date": "2025-09-08T19:16:50.475Z",
+          "amount": 452787,
+          "type": "monthly"
+        },
+        {
+          "id": "2d8b9e14-27c4-420e-9e3d-e23b1547923c",
+          "date": "2025-09-08T19:17:04.476Z",
+          "amount": 452787,
+          "type": "monthly"
+        },
+        {
+          "id": "82571e73-70e1-4b94-971e-c8e5007513e5",
+          "date": "2025-09-08T19:17:08.886Z",
+          "amount": 452787,
+          "type": "monthly"
+        },
+        {
+          "id": "2943188f-b4ab-4741-9795-11108b009cde",
+          "date": "2025-09-08T19:17:09.655Z",
+          "amount": 452787,
+          "type": "monthly"
+        },
+        {
+          "id": "5f953a93-5e21-4109-8bc0-3a81d52e68bd",
+          "date": "2025-09-08T19:17:11.081Z",
+          "amount": 452787,
+          "type": "monthly"
+        },
+        {
+          "id": "54699cda-affc-4f84-b506-6d17e8c686a0",
+          "date": "2025-09-08T19:40:37.392Z",
+          "amount": 2716721,
+          "type": "full"
+        }
+      ],
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1757358911546-459257636-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-08T19:15:11.560Z"
+    },
+    {
+      "id": "d14cff6f-5e7c-4798-8f3c-e8fa4e04abd0",
+      "loanId": 1757360456802,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Education Loan",
+      "amount": 2345678,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 195474,
+      "totalPaid": 2345678,
+      "repayments": [
+        {
+          "id": "e8f19ae8-97f2-4a8d-8fb9-519367ca7e2b",
+          "date": "2025-09-08T20:12:00.551Z",
+          "amount": 195474,
+          "type": "monthly"
+        },
+        {
+          "id": "6bdf387a-9260-44f2-9840-e73578a43e2f",
+          "date": "2025-09-08T20:12:02.674Z",
+          "amount": 195474,
+          "type": "monthly"
+        },
+        {
+          "id": "9e315b60-9e35-4850-9575-40bea3dec62d",
+          "date": "2025-09-08T20:12:04.332Z",
+          "amount": 195474,
+          "type": "monthly"
+        },
+        {
+          "id": "6aa165d8-561f-4fee-a292-a3b658142482",
+          "date": "2025-09-08T20:12:05.569Z",
+          "amount": 195474,
+          "type": "monthly"
+        },
+        {
+          "id": "471768c6-43e1-4770-a53b-890a00912bd6",
+          "date": "2025-09-08T20:12:07.889Z",
+          "amount": 195474,
+          "type": "monthly"
+        },
+        {
+          "id": "f856c128-c1aa-466b-8e7f-87b2233eb4a3",
+          "date": "2025-09-08T20:12:09.932Z",
+          "amount": 195474,
+          "type": "monthly"
+        },
+        {
+          "id": "cc3dcedc-a1f3-418e-8aa4-125259faaba4",
+          "date": "2025-09-08T20:12:11.768Z",
+          "amount": 1172834,
+          "type": "full"
+        }
+      ],
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1757360456795-721100032-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-08T19:40:56.805Z"
+    },
+    {
+      "id": "a99917fe-e1f5-4122-b8ca-dcd4620ad67e",
+      "loanId": 1757361179291,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Education Loan",
+      "amount": 1234,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 103,
+      "totalPaid": 2365,
+      "repayments": [
+        {
+          "id": "1d75bc4d-343f-40ef-a81f-d5032f32b496",
+          "date": "2025-09-08T20:33:39.957Z",
+          "amount": 103,
+          "type": "monthly"
+        },
+        {
+          "id": "7e349d04-c18a-48ac-856a-9dbd7a19418d",
+          "date": "2025-09-08T20:34:05.347Z",
+          "amount": 1131,
+          "type": "full"
+        },
+        {
+          "id": "792e1d51-9689-470c-bfa2-53c6d757529a",
+          "date": "2025-09-08T20:34:08.073Z",
+          "amount": 1131,
+          "type": "full"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [],
+      "status": "Closed",
+      "createdAt": "2025-09-08T19:52:59.295Z"
+    },
+    {
+      "id": "091ad037-75fb-4b26-a8ad-59439a7791d6",
+      "loanId": 1757362393487,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 23456,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 1955,
+      "totalPaid": 23456,
+      "repayments": [
+        {
+          "id": "b54930c1-911c-449b-a9ec-f2d1a9dcfd87",
+          "date": "2025-09-08T20:24:18.351Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "cde2eeaa-0cf1-4156-ae85-912d9f757ead",
+          "date": "2025-09-08T20:24:50.195Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "482e7321-ba58-4e1e-9d88-d9051b918c79",
+          "date": "2025-09-08T20:25:40.655Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "22e5f81e-14d1-43bb-b52b-6f3d8bc0c3af",
+          "date": "2025-09-08T20:28:36.285Z",
+          "amount": 1955,
+          "type": "monthly"
+        },
+        {
+          "id": "8a4d1ad4-2939-4848-9b06-6be7f5dc763e",
+          "date": "2025-09-08T20:29:22.898Z",
+          "amount": 15636,
+          "type": "full"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1757362393252-546447310-loans (5).pdf",
+        "http://localhost:5000/uploads/1757362393457-346741607-ETS tools.png",
+        "http://localhost:5000/uploads/1757362393481-552382513-SalesData.csv"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-08T20:13:13.489Z"
+    },
+    {
+      "id": "e336a561-f390-4cd7-b085-d732ce79c7d2",
+      "loanId": 1757363708987,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Car Loan",
+      "amount": 12345,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 1029,
+      "totalPaid": 12345,
+      "repayments": [
+        {
+          "id": "33ca59a3-9fdf-4dc6-bea9-e74751b9ba4a",
+          "date": "2025-09-08T20:36:20.692Z",
+          "amount": 1029,
+          "type": "monthly"
+        },
+        {
+          "id": "ba90a1ae-430e-4518-9313-4d41309a264b",
+          "date": "2025-09-08T20:36:38.308Z",
+          "amount": 11316,
+          "type": "full"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [],
+      "status": "Closed",
+      "createdAt": "2025-09-08T20:35:08.994Z"
+    },
+    {
+      "id": "62929b00-735c-4a30-bf3c-e5abd2ae6450",
+      "loanId": 1757363973810,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 1234567,
+      "tenureYears": 1,
+      "repaymentMonths": 1,
+      "paymentOption": "full",
+      "monthlyInstallment": 1234567,
+      "totalPaid": 1234567,
+      "repayments": [
+        {
+          "id": "b09fdd33-a355-4d8a-a7f2-9ba0e0ab7343",
+          "date": "2025-09-08T20:39:59.303Z",
+          "amount": 1234567,
+          "type": "monthly"
+        }
+      ],
+      "purpose": "for buisness purpose ",
+      "documents": [],
+      "status": "Closed",
+      "createdAt": "2025-09-08T20:39:33.809Z"
+    },
+    {
+      "id": "95afd875-a90b-4347-bbf2-dcbfc1f87f9e",
+      "loanId": 1757364676844,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 234567,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 19548,
+      "totalPaid": 0,
+      "repayments": [],
+      "purpose": "Buisness",
+      "documents": [],
+      "status": "Rejected",
+      "createdAt": "2025-09-08T20:51:16.848Z"
+    },
+    {
+      "id": "f3fc24e3-35db-493d-8586-4869183dfaa9",
+      "loanId": 1757396773514,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 234567,
+      "tenureYears": 5,
+      "repaymentMonths": 60,
+      "paymentOption": "emi",
+      "monthlyInstallment": 3910,
+      "totalPaid": 234567,
+      "repayments": [
+        {
+          "id": "feecea46-c028-4e20-8eaa-9e39b7a82761",
+          "date": "2025-09-09T05:52:17.230Z",
+          "amount": 3910,
+          "type": "monthly"
+        },
+        {
+          "id": "5547918a-bfff-4860-a382-03b6ff057b65",
+          "date": "2025-09-09T05:52:20.146Z",
+          "amount": 230657,
+          "type": "full"
+        }
+      ],
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1757396773498-386057820-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-09T05:46:13.513Z"
+    },
+    {
+      "id": "1fd873c8-9baa-4c5b-b282-d07276dc8145",
+      "loanId": 1757400440004,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Education Loan",
+      "amount": 234567,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 19548,
+      "totalPaid": 234576,
+      "repayments": [
+        {
+          "id": "f76ef7c7-b922-46e1-8b2f-34a359e47471",
+          "date": "2025-09-09T06:49:55.956Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "dead934d-abff-4067-be04-b3dfaef78945",
+          "date": "2025-09-09T06:49:58.045Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "c3894ae3-b962-4e25-91ef-5bdb532d4779",
+          "date": "2025-09-09T06:50:00.730Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "a72911fc-3e4f-4529-95ef-83010b619f00",
+          "date": "2025-09-09T06:50:02.294Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "af08981b-ea2a-4024-abaf-d6b2a7d0b933",
+          "date": "2025-09-09T06:50:03.002Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "7653de2f-8eae-4546-8982-93188f4d432f",
+          "date": "2025-09-09T06:50:03.504Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "acaf823a-efcf-4a08-9c59-8f7b70e5f1ac",
+          "date": "2025-09-09T06:50:03.910Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "09d233f9-4582-4024-8dcf-e57aca0653a2",
+          "date": "2025-09-09T06:50:04.175Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "cab59a94-3881-4723-ae17-c9409241c80d",
+          "date": "2025-09-09T06:50:04.406Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "2e21a8fd-57ed-49d0-8dee-1d71cc0968e0",
+          "date": "2025-09-09T06:50:04.657Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "f85755ef-e9c1-40d9-b539-e540fedc3c50",
+          "date": "2025-09-09T06:50:04.860Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "a663bb81-522a-4d33-be9d-b3f14cb1fecb",
+          "date": "2025-09-09T06:50:05.063Z",
+          "amount": 19548,
+          "type": "monthly"
+        }
+      ],
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1757400439987-762251636-ETS tools.png",
+        "http://localhost:5000/uploads/1757400439992-769764828-Screenshot 2025-09-03 122846.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-09T06:47:20.004Z"
+    },
+    {
+      "id": "4baeee63-f86b-41d5-b298-d650bc991b73",
+      "loanId": 1757400629132,
+      "userId": 13,
+      "applicantName": "kkk",
+      "applicantEmail": "k@gmail.com",
+      "type": "Personal Loan",
+      "amount": 234567,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 19548,
+      "totalPaid": 136836,
+      "repayments": [
+        {
+          "id": "3c75063d-0a9b-4319-86de-a28d9e553607",
+          "date": "2025-09-09T06:51:08.667Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "4615806d-1ea6-45e4-8fe2-d7b18e427894",
+          "date": "2025-09-09T06:51:09.525Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "1f173a78-b621-454c-9cd4-c49b56f62e56",
+          "date": "2025-09-09T06:51:13.877Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "e40d2e2e-2916-43f5-a8d7-6ef7ef7520c9",
+          "date": "2025-09-09T06:51:15.301Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "4f7f6189-f687-47cf-8ce1-213b93bc1043",
+          "date": "2025-09-09T06:51:15.953Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "8a7b8b0e-c9e7-40ff-8497-6f05262e594c",
+          "date": "2025-09-09T06:59:26.965Z",
+          "amount": 19548,
+          "type": "monthly"
+        },
+        {
+          "id": "bd125205-3ed3-4a67-bce6-ed685e4602c5",
+          "date": "2025-09-09T07:40:06.511Z",
+          "amount": 19548,
+          "type": "monthly"
+        }
+      ],
+      "purpose": "Construction of house ",
+      "documents": [
+        "http://localhost:5000/uploads/1757400629121-400848195-Screenshot 2025-09-04 152941.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-09-09T06:50:29.130Z"
+    },
+    {
+      "id": "c60af2ee-2a6c-41e7-8454-640fd030665e",
+      "loanId": 1757405867581,
+      "userId": 14,
+      "applicantName": "kushal kn",
       "applicantEmail": "kushalkn11@gmail.com",
       "type": "Personal Loan",
       "amount": 500000,
-      "tenure": "3 Years",
-      "purpose": "bikeb loan",
-      "documents": [
-        "http://localhost:5000/uploads/1757077707984-92977156-ETS tools.png"
+      "tenureYears": 3,
+      "repaymentMonths": 36,
+      "paymentOption": "emi",
+      "monthlyInstallment": 13889,
+      "totalPaid": 500000,
+      "repayments": [
+        {
+          "id": "a3b2e231-225c-418a-8cf5-d17c687a8eb3",
+          "date": "2025-09-09T08:19:51.901Z",
+          "amount": 13889,
+          "type": "monthly"
+        },
+        {
+          "id": "07751952-b563-40fc-9368-7e783e13657d",
+          "date": "2025-09-09T08:21:52.815Z",
+          "amount": 486111,
+          "type": "full"
+        }
       ],
-      "status": "Approved"
+      "purpose": "bike purpose",
+      "documents": [
+        "http://localhost:5000/uploads/1757405867570-667322759-ETS tools.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-09T08:17:47.585Z"
     },
     {
-      "id": "361a0d3c-e5a9-4a56-a362-f086ee42f529",
-      "createdAt": "2025-09-05T13:20:06.026Z",
-      "loanId": 1757078406026,
-      "userId": 12,
-      "applicantName": "bhavana",
-      "applicantEmail": "bhavanaminchu@gmail.com",
+      "id": "92f17fa7-9f0e-43c5-ae67-55d3aa97da5a",
+      "loanId": 1757406694003,
+      "userId": 14,
+      "applicantName": "kushal kn",
+      "applicantEmail": "kushalkn11@gmail.com",
       "type": "Business Loan",
-      "amount": 9876543245675434000,
-      "tenure": "15 Years",
-      "purpose": "Buisness",
-      "documents": [
-        "http://localhost:5000/uploads/1757078405937-69254918-loans (3).pdf"
+      "amount": 10000000,
+      "tenureYears": 10,
+      "repaymentMonths": 120,
+      "paymentOption": "emi",
+      "monthlyInstallment": 83334,
+      "totalPaid": 10000000,
+      "repayments": [
+        {
+          "id": "af53fdd9-cf32-4038-8997-d0deedcb9c30",
+          "date": "2025-09-09T08:34:06.585Z",
+          "amount": 83334,
+          "type": "monthly"
+        },
+        {
+          "id": "ad4af498-f1ea-4744-a59f-62dc174cb6b3",
+          "date": "2025-09-09T08:34:20.439Z",
+          "amount": 83334,
+          "type": "monthly"
+        },
+        {
+          "id": "18d419d6-1222-4501-955d-feb5f719c441",
+          "date": "2025-09-09T08:34:21.322Z",
+          "amount": 83334,
+          "type": "monthly"
+        },
+        {
+          "id": "769f3345-3680-46b0-8e87-8a0413b4ae68",
+          "date": "2025-09-09T08:35:04.177Z",
+          "amount": 9749998,
+          "type": "full"
+        }
       ],
-      "status": "Approved"
+      "purpose": "for buisness purpose ",
+      "documents": [
+        "http://localhost:5000/uploads/1757406693989-960443881-Screenshot 2025-09-04 152941.png",
+        "http://localhost:5000/uploads/1757406693991-369132877-Screenshot 2025-09-03 122846.png"
+      ],
+      "status": "Closed",
+      "createdAt": "2025-09-09T08:31:34.002Z"
+    },
+    {
+      "id": "5c2c4728-7dfe-4e80-b3c7-e2be17591765",
+      "loanId": 1757484743295,
+      "userId": 15,
+      "applicantName": "Deepak Khimavath BB",
+      "applicantEmail": "khimavathdd@gmail.com",
+      "type": "Home Loan",
+      "amount": 2444543,
+      "tenureYears": 1,
+      "repaymentMonths": 12,
+      "paymentOption": "emi",
+      "monthlyInstallment": 203712,
+      "totalPaid": 1018560,
+      "repayments": [
+        {
+          "id": "11d62f4d-a6e3-4626-bcfc-a53ce03ff67b",
+          "date": "2025-09-10T06:14:27.772Z",
+          "amount": 203712,
+          "type": "monthly"
+        },
+        {
+          "id": "3dba0c62-0f1f-4e04-b6d1-ddd88610ded3",
+          "date": "2025-09-10T06:14:28.771Z",
+          "amount": 203712,
+          "type": "monthly"
+        },
+        {
+          "id": "e2737ed5-329e-4ce3-82ce-e488eebf9b2c",
+          "date": "2025-09-10T06:14:35.941Z",
+          "amount": 203712,
+          "type": "monthly"
+        },
+        {
+          "id": "dc47153c-d793-434c-a249-3379582a4db1",
+          "date": "2025-09-10T06:14:36.814Z",
+          "amount": 203712,
+          "type": "monthly"
+        },
+        {
+          "id": "0a5035f3-5593-42fe-b445-d8050be3a34d",
+          "date": "2025-09-10T06:15:24.234Z",
+          "amount": 203712,
+          "type": "monthly"
+        }
+      ],
+      "purpose": "for construction of villa ",
+      "documents": [
+        "http://localhost:5000/uploads/1757484743264-176660353-Screenshot 2025-09-04 152941.png",
+        "http://localhost:5000/uploads/1757484743272-733213870-Screenshot 2025-09-03 122846.png"
+      ],
+      "status": "Approved",
+      "createdAt": "2025-09-10T06:12:23.310Z"
     }
   ]
 }
