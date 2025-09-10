@@ -1,105 +1,105 @@
+<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">🏦 InsureWell</div>
-  <ul class="nav-links">
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
-    <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
-    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a></li>
+    <li><a routerLink="/register" routerLinkActive="active" (click)="closeMenu()">Register</a></li>
+    <li><a routerLink="/login" routerLinkActive="active" (click)="closeMenu()">Login</a></li>
   </ul>
 </nav>
 
-
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-content animate__animated animate__fadeInDown">
-      <h1>Secure Your Future with <span class="brand">InsureWell</span></h1>
-      <p>Your trusted insurance partner for life, health & beyond.</p>
-      <button class="cta-btn">Get Started</button>
+  <div class="hero-content animate__animated animate__fadeInDown">
+    <h1>Secure Your Future with <span class="brand">InsureWell</span></h1>
+    <p>Your trusted insurance partner for life, health & beyond.</p>
+    <button class="cta-btn">Get Started</button>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <h2>Why Choose Us?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <h3>💡 Easy Claims</h3>
+      <p>Quick and hassle-free claim settlement.</p>
     </div>
-  </section>
-  
-  <!-- Features Section -->
-  <section class="features">
-    <h2>Why Choose Us?</h2>
-    <div class="feature-cards">
-      <div class="card">
-        <h3>💡 Easy Claims</h3>
-        <p>Quick and hassle-free claim settlement.</p>
-      </div>
-      <div class="card">
-        <h3>📞 24/7 Support</h3>
-        <p>We’re always available to assist you.</p>
-      </div>
-      <div class="card">
-        <h3>💰 Affordable Plans</h3>
-        <p>Insurance that fits your budget.</p>
-      </div>
+    <div class="card">
+      <h3>📞 24/7 Support</h3>
+      <p>We’re always available to assist you.</p>
     </div>
-  </section>
-  
-  <!-- Plans Section -->
-  <section class="plans">
-    <h2>Our Insurance Plans</h2>
-    <div class="plan-cards">
-      <div class="plan">
-        <h3>Life Insurance</h3>
-        <p>Secure your loved ones’ future.</p>
-        <button>Explore</button>
-      </div>
-      <div class="plan">
-        <h3>Health Insurance</h3>
-        <p>Best medical coverage at affordable rates.</p>
-        <button>Explore</button>
-      </div>
-      <div class="plan">
-        <h3>Car Insurance</h3>
-        <p>Protect your vehicle with ease.</p>
-        <button>Explore</button>
-      </div>
+    <div class="card">
+      <h3>💰 Affordable Plans</h3>
+      <p>Insurance that fits your budget.</p>
     </div>
-  </section>
-  
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-cards">
-      <div class="testimonial">
-        <p>"InsureWell made insurance so simple. Highly recommend!"</p>
-        <span>- Ramesh K.</span>
-      </div>
-      <div class="testimonial">
-        <p>"Affordable and trustworthy. Best insurance company!"</p>
-        <span>- Priya S.</span>
-      </div>
-      <div class="testimonial">
-        <p>"Great customer service and fast claim settlement."</p>
-        <span>- Ahmed P.</span>
-      </div>
+  </div>
+</section>
+
+<!-- Plans Section -->
+<section class="plans">
+  <h2>Our Insurance Plans</h2>
+  <div class="plan-cards">
+    <div class="plan">
+      <h3>Life Insurance</h3>
+      <p>Secure your loved ones’ future.</p>
+      <button>Explore</button>
     </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div>
-        <h3>InsureWell</h3>
-        <p>Your trusted partner for a secure future.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a routerLink="/home">Home</a></li>
-          <li><a routerLink="/about">About Us</a></li>
-          <li><a routerLink="/register">Register</a></li>
-          <li><a routerLink="/login">Login</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact Us</h4>
-        <p>Email: support@insurewell.com</p>
-        <p>Phone: +91 98765 43210</p>
-      </div>
+    <div class="plan">
+      <h3>Health Insurance</h3>
+      <p>Best medical coverage at affordable rates.</p>
+      <button>Explore</button>
     </div>
-    <p class="footer-bottom">© 2025 InsureWell. All rights reserved.</p>
-  </footer>
-  
+    <div class="plan">
+      <h3>Car Insurance</h3>
+      <p>Protect your vehicle with ease.</p>
+      <button>Explore</button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial">
+      <p>"InsureWell made insurance so simple. Highly recommend!"</p>
+      <span>- Ramesh K.</span>
+    </div>
+    <div class="testimonial">
+      <p>"Affordable and trustworthy. Best insurance company!"</p>
+      <span>- Priya S.</span>
+    </div>
+    <div class="testimonial">
+      <p>"Great customer service and fast claim settlement."</p>
+      <span>- Ahmed P.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>InsureWell</h3>
+      <p>Your trusted partner for a secure future.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/register">Register</a></li>
+        <li><a routerLink="/login">Login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>Email: support@insurewell.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 InsureWell. All rights reserved.</p>
+</footer>
