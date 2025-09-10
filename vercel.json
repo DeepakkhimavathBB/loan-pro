@@ -3,12 +3,10 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist/loan-pro"
-        }
+        "use": "@vercel/static-build"
       }
     ],
+    "outputDirectory": "dist/loan-pro",
     "routes": [
       {
         "src": "/(.*)",
