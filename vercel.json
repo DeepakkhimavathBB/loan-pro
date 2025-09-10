@@ -6,9 +6,6 @@
         "use": "@vercel/static-build"
       }
     ],
-    "scripts": {
-      "build": "ng build --configuration production"
-    },
     "outputDirectory": "dist/loan-pro",
     "routes": [
       {
