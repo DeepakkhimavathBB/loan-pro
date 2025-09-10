@@ -1,10 +1,14 @@
 {
     "version": 2,
     "builds": [
-      { "src": "angular.json", "use": "@vercel/static-build" }
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build"
+      }
     ],
-    "routes": [
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
+    "scripts": {
+      "build": "ng build --configuration production"
+    },
+    "outputDirectory": "dist/loan-pro"
   }
   
