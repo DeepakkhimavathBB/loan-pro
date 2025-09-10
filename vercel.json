@@ -6,7 +6,6 @@
         "use": "@vercel/static-build"
       }
     ],
-    "outputDirectory": "dist/loan-pro",
     "routes": [
       {
         "src": "/(.*)",
